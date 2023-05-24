@@ -1,0 +1,180 @@
+Sender: LSF System <ekm31@dn017>
+Subject: Job 69145: <VPmPFC> in cluster <erislsf2> Done
+
+Job <VPmPFC> was submitted from host <eris2n4> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <dn017>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/CTP_Tests> was used as the working directory.
+Started at Wed Nov 30 13:33:54 2022
+Results reported on Wed Nov 30 17:41:57 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/CTP_Tests/logs/out_vp12_mpfc.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/CTP_Tests/logs/err_vp12_mpfc.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J VPmPFC
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/CTP_Tests/vp_mpfc.R
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   10439.24 sec.
+    Max Memory :                                 418 MB
+    Average Memory :                             403.73 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               31582.00 MB
+    Max Swap :                                   903 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+ [1] "SampleID"                     "BrNum"                       
+ [3] "Brain_Region"                 "AgeDeath"                    
+ [5] "Sex"                          "PMI"                         
+ [7] "Dx"                           "PTSD"                        
+ [9] "MDD"                          "Control"                     
+[11] "Race"                         "BMI"                         
+[13] "ChildTrauma"                  "AdultTrauma"                 
+[15] "bestpop"                      "europe"                      
+[17] "oceania"                      "africa"                      
+[19] "americas"                     "cs_asia"                     
+[21] "e_asia"                       "ancestryPC1"                 
+[23] "ancestryPC2"                  "ancestryPC3"                 
+[25] "ancestryPC4"                  "ancestryPC5"                 
+[27] "RIN"                          "numReads"                    
+[29] "numMapped"                    "numUnmapped"                 
+[31] "overallMapRate"               "concordMapRate"              
+[33] "totalMapped"                  "mitoMapped"                  
+[35] "mitoRate"                     "totalAssignedGene"           
+[37] "rRNA_rate"                    "per_base_sequence_quality"   
+[39] "per_tile_sequence_quality"    "per_base_sequence_content"   
+[41] "per_sequence_gc_content"      "per_base_n_content"          
+[43] "sequence_length_distribution" "sequence_duplication_levels" 
+[45] "overrepresented_sequences"    "adapter_content"             
+[47] "Brain_Region_Protein"         "PC1"                         
+[49] "PC2"                          "PC3"                         
+[51] "PC4"                          "PC5"                         
+[53] "PC6"                          "PC7"                         
+[55] "PC8"                          "PC9"                         
+[57] "PC10"                         "Male"                        
+[59] "Female"                       "Year"                        
+[61] "Psychosis"                    "Smoking"                     
+[63] "Braak"                        "CERAD"                       
+[65] "Delusions"                    "Famhx MI"                    
+[67] "Famhx Suicide"                "Gross Summary"               
+[69] "Hallucinations"               "Lifetime Anticonvulsant"     
+[71] "Lifetime Antidepress"         "Lifetime Antipsych"          
+[73] "Lifetime Lithium"             "Manner Of Death"             
+[75] "Past Self Mutilation"         "Past SI"                     
+[77] "Past Suicide Attempts"        "Flashbacks"                  
+[79] "Intrusive thoughts"           "Reliving"                    
+[81] "Flash+intrusive+reliving"     "Detachment"                  
+[83] "Dissociation"                 "PTSD_MDD"                    
+[85] "Macroglia"                    "periV"                       
+[87] "ex"                           "in"                          
+[89] "immune"                      
+ [1] "SampleID"                     "BrNum"                       
+ [3] "Brain_Region"                 "AgeDeath"                    
+ [5] "Sex"                          "PMI"                         
+ [7] "Dx"                           "PTSD"                        
+ [9] "MDD"                          "Control"                     
+[11] "Race"                         "BMI"                         
+[13] "ChildTrauma"                  "AdultTrauma"                 
+[15] "bestpop"                      "europe"                      
+[17] "oceania"                      "africa"                      
+[19] "americas"                     "cs_asia"                     
+[21] "e_asia"                       "ancestryPC1"                 
+[23] "ancestryPC2"                  "ancestryPC3"                 
+[25] "ancestryPC4"                  "ancestryPC5"                 
+[27] "RIN"                          "numReads"                    
+[29] "numMapped"                    "numUnmapped"                 
+[31] "overallMapRate"               "concordMapRate"              
+[33] "totalMapped"                  "mitoMapped"                  
+[35] "mitoRate"                     "totalAssignedGene"           
+[37] "rRNA_rate"                    "per_base_sequence_quality"   
+[39] "per_tile_sequence_quality"    "per_base_sequence_content"   
+[41] "per_sequence_gc_content"      "per_base_n_content"          
+[43] "sequence_length_distribution" "sequence_duplication_levels" 
+[45] "overrepresented_sequences"    "adapter_content"             
+[47] "Brain_Region_Protein"         "PC1"                         
+[49] "PC2"                          "PC3"                         
+[51] "PC4"                          "PC5"                         
+[53] "PC6"                          "PC7"                         
+[55] "PC8"                          "PC9"                         
+[57] "PC10"                         "Male"                        
+[59] "Female"                       "Year"                        
+[61] "Psychosis"                    "Smoking"                     
+[63] "Braak"                        "CERAD"                       
+[65] "Delusions"                    "Famhx MI"                    
+[67] "Famhx Suicide"                "Gross Summary"               
+[69] "Hallucinations"               "Lifetime Anticonvulsant"     
+[71] "Lifetime Antidepress"         "Lifetime Antipsych"          
+[73] "Lifetime Lithium"             "Manner Of Death"             
+[75] "Past Self Mutilation"         "Past SI"                     
+[77] "Past Suicide Attempts"        "Flashbacks"                  
+[79] "Intrusive thoughts"           "Reliving"                    
+[81] "Flash+intrusive+reliving"     "Detachment"                  
+[83] "Dissociation"                 "PTSD_MDD"                    
+ [1] "SampleID"                     "BrNum"                       
+ [3] "Brain_Region"                 "AgeDeath"                    
+ [5] "Sex"                          "PMI"                         
+ [7] "Dx"                           "PTSD"                        
+ [9] "MDD"                          "Control"                     
+[11] "Race"                         "BMI"                         
+[13] "ChildTrauma"                  "AdultTrauma"                 
+[15] "bestpop"                      "europe"                      
+[17] "oceania"                      "africa"                      
+[19] "americas"                     "cs_asia"                     
+[21] "e_asia"                       "ancestryPC1"                 
+[23] "ancestryPC2"                  "ancestryPC3"                 
+[25] "ancestryPC4"                  "ancestryPC5"                 
+[27] "RIN"                          "numReads"                    
+[29] "numMapped"                    "numUnmapped"                 
+[31] "overallMapRate"               "concordMapRate"              
+[33] "totalMapped"                  "mitoMapped"                  
+[35] "mitoRate"                     "totalAssignedGene"           
+[37] "rRNA_rate"                    "per_base_sequence_quality"   
+[39] "per_tile_sequence_quality"    "per_base_sequence_content"   
+[41] "per_sequence_gc_content"      "per_base_n_content"          
+[43] "sequence_length_distribution" "sequence_duplication_levels" 
+[45] "overrepresented_sequences"    "adapter_content"             
+[47] "Brain_Region_Protein"         "PC1"                         
+[49] "PC2"                          "PC3"                         
+[51] "PC4"                          "PC5"                         
+[53] "PC6"                          "PC7"                         
+[55] "PC8"                          "PC9"                         
+[57] "PC10"                         "Male"                        
+[59] "Female"                       "Year"                        
+[61] "Psychosis"                    "Smoking"                     
+[63] "Braak"                        "CERAD"                       
+[65] "Delusions"                    "Famhx MI"                    
+[67] "Famhx Suicide"                "Gross Summary"               
+[69] "Hallucinations"               "Lifetime Anticonvulsant"     
+[71] "Lifetime Antidepress"         "Lifetime Antipsych"          
+[73] "Lifetime Lithium"             "Manner Of Death"             
+[75] "Past Self Mutilation"         "Past SI"                     
+[77] "Past Suicide Attempts"        "Flashbacks"                  
+[79] "Intrusive thoughts"           "Reliving"                    
+[81] "Flash+intrusive+reliving"     "Detachment"                  
+[83] "Dissociation"                 "PTSD_MDD"                    
+[85] "Astro"                        "ex"                          
+[87] "in"                           "Macrophage"                  
+[89] "Micro"                        "Mural"                       
+[91] "Oligo"                        "OPC"                         
+[93] "Tcell"                       
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/CTP_Tests/logs/err_vp12_mpfc.txt> for stderr output of this job.
+

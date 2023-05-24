@@ -1,0 +1,250 @@
+Sender: LSF System <ekm31@dn017>
+Subject: Job 90913: <VPCA> in cluster <erislsf2> Done
+
+Job <VPCA> was submitted from host <eris2n4> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <dn017>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables> was used as the working directory.
+Started at Fri Dec  9 13:56:47 2022
+Results reported on Fri Dec  9 14:05:41 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/out_vp12_ca.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/err_vp12_ca.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J VPCA
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/VPCA.R
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   536.29 sec.
+    Max Memory :                                 568 MB
+    Average Memory :                             568.00 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               31432.00 MB
+    Max Swap :                                   1049 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/err_vp12_ca.txt> for stderr output of this job.
+
+Sender: LSF System <ekm31@dn017>
+Subject: Job 90962: <VPCA> in cluster <erislsf2> Done
+
+Job <VPCA> was submitted from host <eris2n4> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <dn017>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables> was used as the working directory.
+Started at Fri Dec  9 14:10:31 2022
+Results reported on Fri Dec  9 14:19:30 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/out_vp12_ca.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/err_vp12_ca.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J VPCA
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/VPCA.R
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   540.70 sec.
+    Max Memory :                                 568 MB
+    Average Memory :                             568.00 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               31432.00 MB
+    Max Swap :                                   1049 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/err_vp12_ca.txt> for stderr output of this job.
+
+Sender: LSF System <ekm31@sn007>
+Subject: Job 112312: <VPCA> in cluster <erislsf2> Exited
+
+Job <VPCA> was submitted from host <eris2n5> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <sn007>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables> was used as the working directory.
+Started at Mon Dec 19 15:48:30 2022
+Results reported on Mon Dec 19 16:09:04 2022
+Cannot open your job file: /PHShome/cu995/.lsbatch/1671482185.112312
+TERM_OWNER: job killed by owner.
+Exited with signal termination: Interrupt.
+
+Resource usage summary:
+
+    CPU time :                                   0.00 sec.
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               -
+
+
+PS:
+
+Unable to read output data from the stdout buffer file </PHShome/cu995/.lsbatch/1671482185.112312.out>: your job was probably aborted prematurely.
+Unable to read stderr data from stderr buffer file; your job was probably aborted prematurely.
+
+Sender: LSF System <ekm31@sna002a>
+Subject: Job 112318: <VPCA> in cluster <erislsf2> Exited
+
+Job <VPCA> was submitted from host <eris2n5> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <sna002a>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables> was used as the working directory.
+Started at Mon Dec 19 15:58:09 2022
+Results reported on Mon Dec 19 16:24:34 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/out_vp12_ca.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/err_vp12_ca.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J VPCA
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/VPCA.R
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   14.77 sec.
+    Max Memory :                                 358 MB
+    Average Memory :                             358.00 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               31642.00 MB
+    Max Swap :                                   846 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/err_vp12_ca.txt> for stderr output of this job.
+
+Sender: LSF System <ekm31@sn005>
+Subject: Job 112353: <VPCA> in cluster <erislsf2> Exited
+
+Job <VPCA> was submitted from host <eris2n5> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <sn005>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables> was used as the working directory.
+Started at Mon Dec 19 16:30:23 2022
+Results reported on Mon Dec 19 16:30:37 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/out_vp12_ca.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/err_vp12_ca.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J VPCA
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/VPCA.R
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   9.89 sec.
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               -
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/err_vp12_ca.txt> for stderr output of this job.
+
+Sender: LSF System <ekm31@sn004>
+Subject: Job 114678: <VPCA> in cluster <erislsf2> Done
+
+Job <VPCA> was submitted from host <eris2n5> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <sn004>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables> was used as the working directory.
+Started at Tue Dec 20 09:23:50 2022
+Results reported on Tue Dec 20 09:32:04 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/out_vp12_ca.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/err_vp12_ca.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J VPCA
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/VPCA.R
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   490.01 sec.
+    Max Memory :                                 570 MB
+    Average Memory :                             570.00 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               31430.00 MB
+    Max Swap :                                   1047 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/FinalizedVariables/logs/err_vp12_ca.txt> for stderr output of this job.
+

@@ -1,0 +1,46 @@
+Sender: LSF System <ekm31@sna002a>
+Subject: Job 81966: <VPDG> in cluster <erislsf2> Done
+
+Job <VPDG> was submitted from host <eris2n5> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <sna002a>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/PCA> was used as the working directory.
+Started at Wed Dec  7 14:48:29 2022
+Results reported on Wed Dec  7 16:19:01 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/PCA/logs/out_vp12_dg.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/PCA/logs/err_vp12_dg.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J VPDG
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/PCA/vp_dg.R
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5457.51 sec.
+    Max Memory :                                 652 MB
+    Average Memory :                             625.02 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               31348.00 MB
+    Max Swap :                                   1137 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/PCA/logs/err_vp12_dg.txt> for stderr output of this job.
+

@@ -1,0 +1,30 @@
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Warning: Variables contain NA's: Lifetime Antidepress 
+Samples with missing data will be dropped.
+
+Dividing work into 100 chunks...
+
+Total:4371 s
+Warning: Variables contain NA's: Lifetime Antidepress 
+Samples with missing data will be dropped.
+
+Dividing work into 100 chunks...
+
+Total:4640 s
+Warning: Variables contain NA's: Lifetime Antidepress 
+Samples with missing data will be dropped.
+
+Dividing work into 100 chunks...
+
+Total:4850 s
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Warning: Variables contain NA's: Lifetime Antidepress 
+Samples with missing data will be dropped.
+
+Dividing work into 100 chunks...
+
+Total:5054 s

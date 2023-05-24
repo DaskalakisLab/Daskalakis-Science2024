@@ -1,0 +1,46 @@
+Sender: LSF System <ekm31@sn004>
+Subject: Job 91070: <ProCA> in cluster <erislsf2> Done
+
+Job <ProCA> was submitted from host <eris2n5> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <sn004>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/Protein/FinalizedVariables> was used as the working directory.
+Started at Fri Dec  9 15:22:40 2022
+Results reported on Fri Dec  9 15:24:31 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/Protein/FinalizedVariables/logs/out_vp12_ca.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/Protein/FinalizedVariables/logs/err_vp12_ca.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J ProCA
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/Protein/FinalizedVariables/VPCA.R
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   112.19 sec.
+    Max Memory :                                 357 MB
+    Average Memory :                             357.00 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               31643.00 MB
+    Max Swap :                                   834 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/Protein/FinalizedVariables/logs/err_vp12_ca.txt> for stderr output of this job.
+

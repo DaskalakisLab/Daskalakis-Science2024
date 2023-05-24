@@ -1,0 +1,46 @@
+Sender: LSF System <ekm31@sn005>
+Subject: Job 85058: <JXVPmPFC> in cluster <erislsf2> Done
+
+Job <JXVPmPFC> was submitted from host <eris2n4> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <sn005>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</PHShome/cu995/daskalakislab/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Jxs> was used as the working directory.
+Started at Thu Dec  8 10:21:27 2022
+Results reported on Thu Dec  8 19:16:35 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Jxs/logs/out_vp12_mpfc.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Jxs/logs/err_vp12_mpfc.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J JXVPmPFC
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Jxs/vp_mpfc.R
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   32296.68 sec.
+    Max Memory :                                 2507 MB
+    Average Memory :                             2343.03 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               29493.00 MB
+    Max Swap :                                   2992 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Jxs/logs/err_vp12_mpfc.txt> for stderr output of this job.
+

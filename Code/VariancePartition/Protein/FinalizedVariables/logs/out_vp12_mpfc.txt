@@ -1,0 +1,46 @@
+Sender: LSF System <ekm31@sn006>
+Subject: Job 91072: <PromPFC> in cluster <erislsf2> Done
+
+Job <PromPFC> was submitted from host <eris2n5> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <sn006>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/Protein/FinalizedVariables> was used as the working directory.
+Started at Fri Dec  9 15:22:43 2022
+Results reported on Fri Dec  9 15:24:39 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/Protein/FinalizedVariables/logs/out_vp12_mpfc.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/Protein/FinalizedVariables/logs/err_vp12_mpfc.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J PromPFC
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/Protein/FinalizedVariables/VPmPFC.R
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   116.97 sec.
+    Max Memory :                                 356 MB
+    Average Memory :                             356.00 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               31644.00 MB
+    Max Swap :                                   836 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/Protein/FinalizedVariables/logs/err_vp12_mpfc.txt> for stderr output of this job.
+

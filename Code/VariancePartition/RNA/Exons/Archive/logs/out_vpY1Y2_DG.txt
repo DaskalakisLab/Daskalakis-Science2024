@@ -1,0 +1,46 @@
+Sender: LSF System <ekm31@sn005>
+Subject: Job 939969: <VPY1Y2_DG> in cluster <erislsf2> Done
+
+Job <VPY1Y2_DG> was submitted from host <eris2n5> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <sn005>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Exons> was used as the working directory.
+Started at Thu Oct 27 15:51:34 2022
+Results reported on Fri Oct 28 06:13:45 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Exons/logs/out_vpY1Y2_DG.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Exons/logs/err_vpY1Y2_DG.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J VPY1Y2_DG
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Exons/vpY1Y2_DG.R
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   45919.49 sec.
+    Max Memory :                                 2720 MB
+    Average Memory :                             2486.54 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               29280.00 MB
+    Max Swap :                                   3207 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Exons/logs/err_vpY1Y2_DG.txt> for stderr output of this job.
+

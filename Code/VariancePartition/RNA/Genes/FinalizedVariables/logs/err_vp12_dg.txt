@@ -1,0 +1,43 @@
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Dividing work into 100 chunks...
+
+Total:508 s
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Dividing work into 100 chunks...
+
+Total:483 s
+Warning message:
+In optwrap(optimizer, devfun, getStart(start, rho$pp), lower = rho$lower,  :
+  convergence code -4 from nloptwrap: NLOPT_ROUNDOFF_LIMITED: Roundoff errors led to a breakdown of the optimization algorithm. In this case, the returned minimum may still be useful. (e.g. this error occurs in NEWUOA if one tries to achieve a tolerance too close to machine precision.)
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Error in .fitExtractVarPartModel(exprObj, formula, data, REML = REML,  : 
+  Variable in formula is not found: in
+Calls: fitExtractVarPartModel -> fitExtractVarPartModel -> .fitExtractVarPartModel
+Execution halted
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Error in .fitExtractVarPartModel(exprObj, formula, data, REML = REML,  : 
+  Variable in formula is not found: in
+Calls: fitExtractVarPartModel -> fitExtractVarPartModel -> .fitExtractVarPartModel
+Execution halted
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Dividing work into 100 chunks...
+
+
+Execution halted
+Terminated
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Dividing work into 100 chunks...
+
+Total:2179 s

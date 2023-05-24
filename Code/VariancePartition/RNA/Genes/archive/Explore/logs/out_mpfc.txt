@@ -1,0 +1,46 @@
+Sender: LSF System <ekm31@sna002b>
+Subject: Job 951958: <VPmPFC> in cluster <erislsf2> Done
+
+Job <VPmPFC> was submitted from host <eris2n5> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <sna002b>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/Explore> was used as the working directory.
+Started at Thu Nov 10 12:10:41 2022
+Results reported on Thu Nov 10 13:27:03 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/Explore/logs/out_mpfc.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/Explore/logs/err_mpfc.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J VPmPFC
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/Explore/vpmPFC.R
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1645.87 sec.
+    Max Memory :                                 431 MB
+    Average Memory :                             411.56 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               31569.00 MB
+    Max Swap :                                   981 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Genes/Explore/logs/err_mpfc.txt> for stderr output of this job.
+

@@ -1,0 +1,25 @@
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Dividing work into 100 chunks...
+
+Total:556 s
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Dividing work into 100 chunks...
+
+Total:578 s
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Error in .fitExtractVarPartModel(exprObj, formula, data, REML = REML,  : 
+  Variable in formula is not found: in
+Calls: fitExtractVarPartModel -> fitExtractVarPartModel -> .fitExtractVarPartModel
+Execution halted
+Loading required package: ggplot2
+Loading required package: limma
+Loading required package: BiocParallel
+Dividing work into 100 chunks...
+
+Total:467 s

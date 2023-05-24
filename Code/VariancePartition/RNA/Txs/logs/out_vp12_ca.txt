@@ -1,0 +1,46 @@
+Sender: LSF System <ekm31@sn007>
+Subject: Job 85076: <TXVPCA> in cluster <erislsf2> Exited
+
+Job <TXVPCA> was submitted from host <eris2n4> by user <cu995> in cluster <erislsf2>.
+Job was executed on host(s) <sn007>, in queue <bigmem>, as user <cu995> in cluster <erislsf2>.
+</PHShome/cu995> was used as the home directory.
+</PHShome/cu995/daskalakislab/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Txs> was used as the working directory.
+Started at Thu Dec  8 10:31:40 2022
+Results reported on Thu Dec  8 10:37:16 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -o /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Txs/logs/out_vp12_ca.txt
+#BSUB -e /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Txs/logs/err_vp12_ca.txt
+#BSUB -W 100:30
+#BSUB -q bigmem
+#BSUB -M 64000
+#BSUB -J TXVPCA
+Rscript /data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Txs/vp_ca.R
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   336.87 sec.
+    Max Memory :                                 1782 MB
+    Average Memory :                             1782.00 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               30218.00 MB
+    Max Swap :                                   2269 MB
+    Max Processes :                              4
+    Max Threads :                                6
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/humgen/daskalakislab/dipietro/SciencePaper/Code/VariancePartition/RNA/Txs/logs/err_vp12_ca.txt> for stderr output of this job.
+
