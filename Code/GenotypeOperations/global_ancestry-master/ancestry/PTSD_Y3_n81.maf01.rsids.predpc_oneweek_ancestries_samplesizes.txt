@@ -1,0 +1,4 @@
+Var1 Freq
+aam 4
+eur 74
+oth 3

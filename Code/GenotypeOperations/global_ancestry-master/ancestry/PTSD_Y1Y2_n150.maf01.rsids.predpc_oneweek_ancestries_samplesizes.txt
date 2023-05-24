@@ -1,0 +1,7 @@
+Var1 Freq
+aam 24
+eas 1
+eur 117
+lat 2
+nat 1
+oth 5
