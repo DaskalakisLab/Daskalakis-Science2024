@@ -1,0 +1,1 @@
+Used to map gene, exon, jx, tx ids to gene symbols.
