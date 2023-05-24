@@ -1,0 +1,176 @@
+Loading required package: Matrix
+Loading required package: metadat
+
+Loading the 'metafor' package (version 3.8-1). For an
+introduction to the package please type: help(metafor)
+
+Error in gzfile(file, "rb") : cannot open the connection
+Calls: meta_analyze -> readRDS -> gzfile
+In addition: Warning message:
+In gzfile(file, "rb") :
+  cannot open compressed file '/data/humgen/daskalakislab/dipietro/SciencePaper/Data/LimmaResults/SexSpecific/Protein/Proteins/Y1Y2/results_MDD_CentralAmyg_MDD.RDS', probable reason 'No such file or directory'
+Execution halted
+Loading required package: Matrix
+Loading required package: metadat
+
+Loading the 'metafor' package (version 3.8-1). For an
+introduction to the package please type: help(metafor)
+
+Error in gzfile(file, "rb") : cannot open the connection
+Calls: meta_analyze -> readRDS -> gzfile
+In addition: Warning message:
+In gzfile(file, "rb") :
+  cannot open compressed file '/data/humgen/daskalakislab/dipietro/SciencePaper/Data/LimmaResults/SexSpecific/Protein/Proteins/Y1Y2/results_MDD_CentralAmyg_MDD.RDS', probable reason 'No such file or directory'
+Execution halted
+Loading required package: Matrix
+Loading required package: metadat
+
+Loading the 'metafor' package (version 3.8-1). For an
+introduction to the package please type: help(metafor)
+
+[1] TRUE
+[1] TRUE
+Loading required package: Matrix
+Loading required package: metadat
+
+Loading the 'metafor' package (version 3.8-1). For an
+introduction to the package please type: help(metafor)
+
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+Warning message:
+Studies with NAs omitted from model fitting. 
+[1] TRUE
+Warning message:
+Studies with NAs omitted from model fitting. 
+[1] TRUE
+Warning message:
+Studies with NAs omitted from model fitting. 
+[1] TRUE
+[1] TRUE
+[1] TRUE
+Warning message:
+Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+Warning message:
+Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] TRUE
+There were 23 warnings (use warnings() to see them)
+[1] TRUE
+There were 22 warnings (use warnings() to see them)
+[1] TRUE
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] TRUE
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] TRUE
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+Loading required package: Matrix
+Loading required package: metadat
+
+Loading the 'metafor' package (version 3.8-1). For an
+introduction to the package please type: help(metafor)
+
+[1] TRUE
+Loading required package: Matrix
+Loading required package: metadat
+
+Loading the 'metafor' package (version 3.8-1). For an
+introduction to the package please type: help(metafor)
+
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+Warning message:
+Studies with NAs omitted from model fitting. 
+[1] TRUE
+Warning message:
+Studies with NAs omitted from model fitting. 
+[1] TRUE
+Warning message:
+Studies with NAs omitted from model fitting. 
+[1] TRUE
+Warning message:
+Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] TRUE
+Warning messages:
+1: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+2: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+3: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+[1] TRUE
+Warning message:
+Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+[1] TRUE
+Warning messages:
+1: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+2: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+[1] TRUE
+Warning messages:
+1: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+2: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+3: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+4: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+5: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+[1] TRUE
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] TRUE
+There were 25 warnings (use warnings() to see them)
+[1] TRUE
+There were 41 warnings (use warnings() to see them)
+[1] TRUE
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] TRUE
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] TRUE
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] TRUE
+Warning messages:
+1: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+2: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+3: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+[1] TRUE
+Warning messages:
+1: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+2: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+[1] TRUE
+Warning messages:
+1: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+2: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+3: Ratio of largest to smallest sampling variance extremely large. May not be able to obtain stable results. 
+[1] TRUE
+[1] TRUE
+[1] TRUE
