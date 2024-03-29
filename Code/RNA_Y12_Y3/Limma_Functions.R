@@ -367,8 +367,8 @@ limma_wrapper <- function(anno_file, voom_file, region, dx=NULL, ptsd_vs_mdd = F
 
 
 # region <- "mPFC"
-# anno_file = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_Y1Y2.RDS"
-# voom_file = paste0("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Txs/Y1Y2/log2TMM1_",region,".RDS")
+# anno_file = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_batch1.RDS"
+# voom_file = paste0("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Txs/batch1/log2TMM1_",region,".RDS")
 # region = region
 # dx="PTSD"
 # ptsd_vs_mdd = F
@@ -377,5 +377,5 @@ limma_wrapper <- function(anno_file, voom_file, region, dx=NULL, ptsd_vs_mdd = F
 # type = "tx"
 # covariates = c("PTSD","AgeDeath","Sex","PMI","ancestryPC1","ancestryPC2","Astro","inhib","ex","Oligo","Micro","OPC","Tcell","mitoMapped")
 # contrast_var = "PTSD"
-# out_folder = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Limma_Results/Txs/FinalizedCovs_01_30_23/Y1Y2/PTSD/"
+# out_folder = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Limma_Results/Txs/FinalizedCovs_01_30_23/batch1/PTSD/"
 
