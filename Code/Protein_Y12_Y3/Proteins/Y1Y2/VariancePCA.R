@@ -29,25 +29,25 @@ calculate_PCs <- function(expr){
 }
 
 
-expr_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Proteins/CleanedWithSampleIDs/Y1Y2_CentralAmyg_clean_no_GIS.RDS")
+expr_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Proteins/CleanedWithSampleIDs/batch1_CentralAmyg_clean_no_GIS.RDS")
 expr_ca <- as.data.frame(t(expr_ca))
 PC_ca <- calculate_PCs(expr_ca)
 PC_ca <- as.data.frame(PC_ca)
 
-expr_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Proteins/CleanedWithSampleIDs/Y1Y2_DG_clean_no_GIS.RDS")
+expr_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Proteins/CleanedWithSampleIDs/batch1_DG_clean_no_GIS.RDS")
 expr_dg <- as.data.frame(t(expr_dg))
 PC_dg <- calculate_PCs(expr_dg)
 PC_dg <- as.data.frame(PC_dg)
 
-expr_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Proteins/CleanedWithSampleIDs/Y1Y2_mPFC_clean_no_GIS.RDS")
+expr_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Proteins/CleanedWithSampleIDs/batch1_mPFC_clean_no_GIS.RDS")
 expr_mpfc <- as.data.frame(t(expr_mpfc))
 PC_mpfc <- calculate_PCs(expr_mpfc)
 PC_mpfc <- as.data.frame(PC_mpfc)
 
 
-saveRDS(PC_ca, "~/daskalakislab/daskalakislab/dipietro/SciencePaper/Data/Protein/PCA/Protein/Y1Y2/PCA_CentralAmyg.RDS")
-saveRDS(PC_dg, "~/daskalakislab/daskalakislab/dipietro/SciencePaper/Data/Protein/PCA/Protein/Y1Y2/PCA_DG.RDS")
-saveRDS(PC_mpfc, "~/daskalakislab/daskalakislab/dipietro/SciencePaper/Data/Protein/PCA/Protein/Y1Y2/PCA_mPFC.RDS")
+saveRDS(PC_ca, "~/daskalakislab/daskalakislab/dipietro/SciencePaper/Data/Protein/PCA/Protein/batch1/PCA_CentralAmyg.RDS")
+saveRDS(PC_dg, "~/daskalakislab/daskalakislab/dipietro/SciencePaper/Data/Protein/PCA/Protein/batch1/PCA_DG.RDS")
+saveRDS(PC_mpfc, "~/daskalakislab/daskalakislab/dipietro/SciencePaper/Data/Protein/PCA/Protein/batch1/PCA_mPFC.RDS")
 
 
 #
