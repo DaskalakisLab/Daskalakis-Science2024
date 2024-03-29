@@ -1,7 +1,7 @@
 # To do on server use: module load R/testversions/4.2.0
 library(variancePartition)
 # # To see which are categorical and which are continuous
-# info <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/Y1Y2/All_All.RDS")
+# info <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_All.RDS")
 # covs <- c("BrNum","SampleID","Brain_Region","AgeDeath","Sex","PMI","Dx","PTSD",
 #           "MDD","Control","BMI","Astro","Endo","Macro","Micro","Mural","Oligo",
 #           "OPC","Tcell","Excit","Inhib","europe","oceania","africa","americas",
@@ -107,9 +107,9 @@ form3 <- ~ `AgeDeath2`+(1|`Sex`)+`PMI`+`PTSD`+`MDD`+
   `Lifetime Antidepress`+`Lifetime Antipsych`+`Lifetime Lithium`+(1|`Manner Of Death`)+
   `Past Self Mutilation`+(1|`Past Suicide Attempts`)+`Flashbacks`+`Intrusive thoughts`
 
-info_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/Y1Y2/All_CentralAmyg.RDS")
-info_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/Y1Y2/All_DG.RDS")
-info_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/Y1Y2/All_mPFC.RDS")
+info_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_CentralAmyg.RDS")
+info_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_DG.RDS")
+info_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_mPFC.RDS")
 
 info_ca$AgeDeath2 <- info_ca$AgeDeath**2
 info_dg$AgeDeath2 <- info_dg$AgeDeath**2
@@ -127,9 +127,9 @@ info_ca <- scale_cont(info_ca)
 info_dg <- scale_cont(info_dg)
 info_mpfc <- scale_cont(info_mpfc)
 
-vall_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/Y1Y2/VoomCentralAmyg.RDS")
-vall_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/Y1Y2/VoomDG.RDS")
-vall_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/Y1Y2/VoommPFC.RDS")
+vall_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/batch1/VoomCentralAmyg.RDS")
+vall_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/batch1/VoomDG.RDS")
+vall_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/batch1/VoommPFC.RDS")
 
 expr_ca <- vall_ca$E
 expr_ca <- as.data.frame(expr_ca)
@@ -150,13 +150,13 @@ expr_mpfc <- expr_mpfc[,rownames(info_mpfc)]
 expr_mpfc <- as.matrix(expr_mpfc)
 
 varPart_mpfc1 <- fitExtractVarPartModel(expr_mpfc, form1, info_mpfc)
-saveRDS(varPart_mpfc1, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/Genes/VarPartFiles/Y1Y2/mPFC_ae_age2.RDS")
+saveRDS(varPart_mpfc1, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/Genes/VarPartFiles/batch1/mPFC_ae_age2.RDS")
 
 # varPart_mpfc2 <- fitExtractVarPartModel(expr_mpfc, form2, info_mpfc)
-# saveRDS(varPart_mpfc2, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/Genes/VarPartFiles/Y1Y2/mPFC_gPCs.RDS")
+# saveRDS(varPart_mpfc2, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/Genes/VarPartFiles/batch1/mPFC_gPCs.RDS")
 # 
 # varPart_mpfc3 <- fitExtractVarPartModel(expr_mpfc, form3, info_mpfc)
-# saveRDS(varPart_mpfc3, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/Genes/VarPartFiles/Y1Y2/mPFC_aPCs.RDS")
+# saveRDS(varPart_mpfc3, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/Genes/VarPartFiles/batch1/mPFC_aPCs.RDS")
 # 
 
 
