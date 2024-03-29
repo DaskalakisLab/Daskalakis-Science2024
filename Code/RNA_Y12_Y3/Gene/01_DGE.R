@@ -2,29 +2,29 @@ library(SummarizedExperiment)
 library(edgeR)
 
 # Load data file
-load("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Bulk/rse_gene.y123_n688.Rdata")
+load("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Bulk/rse_gene.batch13_n688.Rdata")
 
 dcount=assays(rse_gene)[[1]]
 dcount <- as.data.frame(dcount)
 
-annoy12 <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_Y1Y2.RDS")
-annoy3 <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_Y3.RDS")
+annobatch1 <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_batch1.RDS")
+annobatch2 <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_batch2.RDS")
 
-ca_y12 <- unique(annoy12[annoy12$Brain_Region=="CentralAmyg", "SampleID"])
-dg_y12 <- unique(annoy12[annoy12$Brain_Region=="DG", "SampleID"])
-mpfc_y12 <- unique(annoy12[annoy12$Brain_Region=="mPFC", "SampleID"])
+ca_batch1 <- unique(annobatch1[annobatch1$Brain_Region=="CentralAmyg", "SampleID"])
+dg_batch1 <- unique(annobatch1[annobatch1$Brain_Region=="DG", "SampleID"])
+mpfc_batch1 <- unique(annobatch1[annobatch1$Brain_Region=="mPFC", "SampleID"])
 
-ca_y3 <- unique(annoy3[annoy3$Brain_Region=="CentralAmyg", "SampleID"])
-dg_y3 <- unique(annoy3[annoy3$Brain_Region=="DG", "SampleID"])
-mpfc_y3 <- unique(annoy3[annoy3$Brain_Region=="mPFC", "SampleID"])
+ca_batch2 <- unique(annobatch2[annobatch2$Brain_Region=="CentralAmyg", "SampleID"])
+dg_batch2 <- unique(annobatch2[annobatch2$Brain_Region=="DG", "SampleID"])
+mpfc_batch2 <- unique(annobatch2[annobatch2$Brain_Region=="mPFC", "SampleID"])
 
-count_ca_y12 <- dcount[,ca_y12]
-count_dg_y12 <- dcount[,dg_y12]
-count_mpfc_y12 <- dcount[,mpfc_y12]
+count_ca_batch1 <- dcount[,ca_batch1]
+count_dg_batch1 <- dcount[,dg_batch1]
+count_mpfc_batch1 <- dcount[,mpfc_batch1]
 
-count_ca_y3 <- dcount[,ca_y3]
-count_dg_y3 <- dcount[,dg_y3]
-count_mpfc_y3 <- dcount[,mpfc_y3]
+count_ca_batch2 <- dcount[,ca_batch2]
+count_dg_batch2 <- dcount[,dg_batch2]
+count_mpfc_batch2 <- dcount[,mpfc_batch2]
 
 
 
@@ -40,37 +40,37 @@ create_dge_list <- function(counts, anno){
   return(dge)
 }
 
-dge_ca_y12 <- create_dge_list(count_ca_y12, annoy12)
-dge_dg_y12 <- create_dge_list(count_dg_y12, annoy12)
-dge_mpfc_y12 <- create_dge_list(count_mpfc_y12, annoy12)
+dge_ca_batch1 <- create_dge_list(count_ca_batch1, annobatch1)
+dge_dg_batch1 <- create_dge_list(count_dg_batch1, annobatch1)
+dge_mpfc_batch1 <- create_dge_list(count_mpfc_batch1, annobatch1)
 
-dge_ca_y3 <- create_dge_list(count_ca_y3, annoy3)
-dge_dg_y3 <- create_dge_list(count_dg_y3, annoy3)
-dge_mpfc_y3 <- create_dge_list(count_mpfc_y3, annoy3)
+dge_ca_batch2 <- create_dge_list(count_ca_batch2, annobatch2)
+dge_dg_batch2 <- create_dge_list(count_dg_batch2, annobatch2)
+dge_mpfc_batch2 <- create_dge_list(count_mpfc_batch2, annobatch2)
 
-identical(colnames(dge_ca_y12$counts), rownames(dge_ca_y12$samples))
-identical(colnames(dge_dg_y12$counts), rownames(dge_dg_y12$samples))
-identical(colnames(dge_mpfc_y12$counts), rownames(dge_mpfc_y12$samples))
+identical(colnames(dge_ca_batch1$counts), rownames(dge_ca_batch1$samples))
+identical(colnames(dge_dg_batch1$counts), rownames(dge_dg_batch1$samples))
+identical(colnames(dge_mpfc_batch1$counts), rownames(dge_mpfc_batch1$samples))
 
-identical(colnames(dge_ca_y3$counts), rownames(dge_ca_y3$samples))
-identical(colnames(dge_dg_y3$counts), rownames(dge_dg_y3$samples))
-identical(colnames(dge_mpfc_y3$counts), rownames(dge_mpfc_y3$samples))
-
-
-setdiff(rownames(dge_ca_y12$samples), ca_y12)
-setdiff(rownames(dge_dg_y12$samples), dg_y12)
-setdiff(rownames(dge_mpfc_y12$samples), mpfc_y12)
-
-setdiff(rownames(dge_ca_y3$samples), ca_y3)
-setdiff(rownames(dge_dg_y3$samples), dg_y3)
-setdiff(rownames(dge_mpfc_y3$samples), mpfc_y3)
+identical(colnames(dge_ca_batch2$counts), rownames(dge_ca_batch2$samples))
+identical(colnames(dge_dg_batch2$counts), rownames(dge_dg_batch2$samples))
+identical(colnames(dge_mpfc_batch2$counts), rownames(dge_mpfc_batch2$samples))
 
 
-saveRDS(dge_ca_y12, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/Y1Y2/DGE_CentralAmyg.RDS")
-saveRDS(dge_dg_y12, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/Y1Y2/DGE_DG.RDS")
-saveRDS(dge_mpfc_y12, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/Y1Y2/DGE_mPFC.RDS")
+setdiff(rownames(dge_ca_batch1$samples), ca_batch1)
+setdiff(rownames(dge_dg_batch1$samples), dg_batch1)
+setdiff(rownames(dge_mpfc_batch1$samples), mpfc_batch1)
 
-saveRDS(dge_ca_y3, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/Y3/DGE_CentralAmyg.RDS")
-saveRDS(dge_dg_y3, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/Y3/DGE_DG.RDS")
-saveRDS(dge_mpfc_y3, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/Y3/DGE_mPFC.RDS")
+setdiff(rownames(dge_ca_batch2$samples), ca_batch2)
+setdiff(rownames(dge_dg_batch2$samples), dg_batch2)
+setdiff(rownames(dge_mpfc_batch2$samples), mpfc_batch2)
+
+
+saveRDS(dge_ca_batch1, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch1/DGE_CentralAmyg.RDS")
+saveRDS(dge_dg_batch1, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch1/DGE_DG.RDS")
+saveRDS(dge_mpfc_batch1, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch1/DGE_mPFC.RDS")
+
+saveRDS(dge_ca_batch2, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch2/DGE_CentralAmyg.RDS")
+saveRDS(dge_dg_batch2, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch2/DGE_DG.RDS")
+saveRDS(dge_mpfc_batch2, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch2/DGE_mPFC.RDS")
 
