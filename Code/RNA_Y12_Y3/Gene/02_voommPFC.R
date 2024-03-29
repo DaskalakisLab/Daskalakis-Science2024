@@ -13,7 +13,7 @@ library(readxl)
 # Years 1 and 2
 #################################################################################################################
 # Read DGE list created in /data/humgen/daskalakislab/dipietro/SciencePaper/Code/RNA/Gene/01_DGE.R
-all <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/Y1Y2/DGE_mPFC.RDS")
+all <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch1/DGE_mPFC.RDS")
 dim(all)
 # 58037   150
 
@@ -35,7 +35,7 @@ mm <- model.matrix(~0 + all$samples$group)
 # Transform count data to log2-counts per million
 vall <- voom(zall, design = mm, plot = TRUE, save.plot = TRUE)
 
-filename="/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/Y1Y2/VoommPFC.RDS"
+filename="/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/batch1/VoommPFC.RDS"
 
 saveRDS(vall,file=filename)
 rm(list=ls())
@@ -44,7 +44,7 @@ rm(list=ls())
 # Year 3
 #################################################################################################################
 # Read DGE list created in /data/humgen/daskalakislab/dipietro/SciencePaper/Code/RNA/Gene/01_DGE.R
-all <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/Y3/DGE_mPFC.RDS")
+all <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch2/DGE_mPFC.RDS")
 dim(all)
 # 58037    79
 
@@ -66,7 +66,7 @@ mm <- model.matrix(~0 + all$samples$group)
 # Transform count data to log2-counts per million
 vall <- voom(zall, design = mm, plot = TRUE, save.plot = TRUE)
 
-filename="/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/Y3/VoommPFC.RDS"
+filename="/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/batch2/VoommPFC.RDS"
 
 saveRDS(vall,file=filename)
 
