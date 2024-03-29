@@ -1,19 +1,19 @@
 library(variancePartition)
 
 prepare_norm <- function(norm,anno){
-  batch_designs <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/Proteomics/batch_designs.RDS")
+  batch1_designs <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/Proteomics/batch1_designs.RDS")
   
-  batch_designs <- as.data.frame(batch_designs)
-  batch_designs$Plate <- gsub("F", "", batch_designs$Plate)
-  batch_designs$Plate <- sprintf("%02d", as.numeric(batch_designs$Plate))
-  batch_designs$ID <- paste0("b",batch_designs$Plate, ".", batch_designs$Position)
+  batch1_designs <- as.data.frame(batch1_designs)
+  batch1_designs$Plate <- gsub("F", "", batch1_designs$Plate)
+  batch1_designs$Plate <- sprintf("%02d", as.numeric(batch1_designs$Plate))
+  batch1_designs$ID <- paste0("b",batch1_designs$Plate, ".", batch1_designs$Position)
   
-  batch_designs <- merge(batch_designs, anno[,c("BrNum","SampleID","Brain_Region_Protein")], by.x=c("BrNum", "Brain_Region"), by.y=c("BrNum", "Brain_Region_Protein"), all.x=T)
-  batch_designs[batch_designs$BrNum=="GIS","SampleID"] <- batch_designs[batch_designs$BrNum=="GIS","ID"]
+  batch1_designs <- merge(batch1_designs, anno[,c("BrNum","SampleID","Brain_Region_Protein")], by.x=c("BrNum", "Brain_Region"), by.y=c("BrNum", "Brain_Region_Protein"), all.x=T)
+  batch1_designs[batch1_designs$BrNum=="GIS","SampleID"] <- batch1_designs[batch1_designs$BrNum=="GIS","ID"]
   norm <- as.data.frame(norm)
   for (id in names(norm)){
     print(id)
-    names(norm)[names(norm)==id] <- batch_designs[batch_designs$ID == id,"SampleID"]
+    names(norm)[names(norm)==id] <- batch1_designs[batch1_designs$ID == id,"SampleID"]
   }
   names(norm)
   norm <- norm[,startsWith(names(norm), "R")]
@@ -24,7 +24,7 @@ prepare_norm <- function(norm,anno){
 
 
 # # To see which are categorical and which are continuous
-# info <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch/All_All.RDS")
+# info <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_All.RDS")
 # covs <- c("BrNum","SampleID","Brain_Region","AgeDeath","Sex","PMI","Dx","PTSD",
 #           "MDD","Control","BMI","Astro","Endo","Macro","Micro","Mural","Oligo",
 #           "OPC","Tcell","Excit","Inhib","europe","oceania","africa","americas",
@@ -86,9 +86,9 @@ form3 <- ~ `AgeDeath`+(1|`Sex`)+`PMI`+`PTSD`+`MDD`+
   `Lifetime Antidepress`+`Lifetime Antipsych`+`Lifetime Lithium`+(1|`Manner Of Death`)+
   `Past Self Mutilation`+(1|`Past Suicide Attempts`)+`Flashbacks`+`Intrusive thoughts`
 
-info_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch/All_CentralAmyg.RDS")
-info_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch/All_DG.RDS")
-info_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch/All_mPFC.RDS")
+info_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_CentralAmyg.RDS")
+info_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_DG.RDS")
+info_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_mPFC.RDS")
 rownames(info_ca) <- info_ca$SampleID
 rownames(info_dg) <- info_dg$SampleID
 rownames(info_mpfc) <- info_mpfc$SampleID
@@ -97,9 +97,9 @@ info_ca <- scale_cont(info_ca)
 info_dg <- scale_cont(info_dg)
 info_mpfc <- scale_cont(info_mpfc)
 
-tamp_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Proteins/batch_Amygdala.RDS")
-tamp_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Proteins/batch_Hippocampus.RDS")
-tamp_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Proteins/batch_mPFC.RDS")
+tamp_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Proteins/batch1_Amygdala.RDS")
+tamp_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Proteins/batch1_Hippocampus.RDS")
+tamp_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Proteins/batch1_mPFC.RDS")
 
 expr_ca <- prepare_norm(tamp_ca$cleanDat,info_ca)
 expr_ca <- expr_ca[complete.cases(expr_ca), ]
@@ -122,13 +122,13 @@ expr_mpfc <- expr_mpfc[,rownames(info_mpfc)]
 
 
 # varPart_mpfc1 <- fitExtractVarPartModel(expr_mpfc, form1, info_mpfc)
-# saveRDS(varPart_mpfc1, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Proteins/VarPartFiles/batch/mPFC_ae.RDS")
+# saveRDS(varPart_mpfc1, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Proteins/VarPartFiles/batch1/mPFC_ae.RDS")
 
 varPart_mpfc2 <- fitExtractVarPartModel(expr_mpfc, form2, info_mpfc)
-saveRDS(varPart_mpfc2, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Proteins/VarPartFiles/batch/mPFC_gPCs.RDS")
+saveRDS(varPart_mpfc2, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Proteins/VarPartFiles/batch1/mPFC_gPCs.RDS")
 
 varPart_mpfc3 <- fitExtractVarPartModel(expr_mpfc, form3, info_mpfc)
-saveRDS(varPart_mpfc3, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Proteins/VarPartFiles/batch/mPFC_aPCs.RDS")
+saveRDS(varPart_mpfc3, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Proteins/VarPartFiles/batch1/mPFC_aPCs.RDS")
 
 
 
