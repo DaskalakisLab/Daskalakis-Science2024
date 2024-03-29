@@ -5,7 +5,7 @@ library(ggplot2)
 library(ggpubr)
 
 source("/data/humgen/daskalakislab/dipietro/SciencePaper/Code/TAMPOR/TAMPOR.R")
-dat <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Proteins/Y1Y2.TMT_rawAbundances.NoCorrection.RDS")
+dat <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Proteins/batch1.TMT_rawAbundances.NoCorrection.RDS")
 dat <- as.matrix(dat)
 traits <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/Proteomics/batch_designs.RDS")
 traits$Plate <- gsub("F", "", traits$Plate)
