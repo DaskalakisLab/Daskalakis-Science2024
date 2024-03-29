@@ -1,6 +1,6 @@
 ###Ricopili Modified for Ancestry (MANC) master script
 
-###Initial configuration steps
+##Initial configuration steps
 
 #User: Unzip the data, put contents into a working directory
 
