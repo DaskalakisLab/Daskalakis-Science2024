@@ -1,5 +1,0 @@
-Var1 Freq
-aam 12
-eur 32
-lat 1
-oth 3

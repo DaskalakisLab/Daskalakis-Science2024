@@ -1,7 +1,0 @@
-Var1 Freq
-aam 30
-eur 189
-lat 4
-nat 1
-oth 6
-pue 1
