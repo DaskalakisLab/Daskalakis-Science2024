@@ -7,7 +7,7 @@ library(doParallel)
 library(ggplot2)
 library(ggpubr)
 
-dat <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/1b.PD.TMT_Peptides_Y1Y2.NoCorrection.RDS")
+dat <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/1b.PD.TMT_Peptides_batch1.NoCorrection.RDS")
 dat <- as.matrix(dat)
 traits <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/Proteomics/batch_designs.RDS")
 traits$Plate <- gsub("F", "", traits$Plate)
