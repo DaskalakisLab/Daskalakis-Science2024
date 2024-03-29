@@ -10,7 +10,6 @@ WORKING_DIR="/data/humgen/daskalakislab/dipietro/SciencePaper/Code/GenotypeOpera
 ##Call into WD
 cd $WORKING_DIR
 
-
 #User: Give the location of the PLINK 2 binary
 plink_location=/data/humgen/daskalakislab/dipietro/SciencePaper/Data/GlobalAncestry/Requirements/plink
 
