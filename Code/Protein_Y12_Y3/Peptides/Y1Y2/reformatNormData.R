@@ -1,4 +1,4 @@
-anno <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_Y1Y2.RDS")
+anno <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_batch1.RDS")
 
 prepare_norm <- function(norm, anno){
   norm <- as.data.frame(norm)
@@ -22,20 +22,20 @@ prepare_norm <- function(norm, anno){
   return(norm)
 }
 
-Y1Y2_DG <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Peptides/Y1Y2_Hippocampus.RDS")
-Y1Y2_DG_clean <- as.data.frame(Y1Y2_DG$cleanDat)
-Y1Y2_DG_clean <- prepare_norm(Y1Y2_DG_clean,anno)
-saveRDS(Y1Y2_DG_clean, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Peptides/CleanWithSampleIDs/Y1Y2_DG_clean_no_GIS.RDS")
+batch1_DG <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Peptides/batch1_Hippocampus.RDS")
+batch1_DG_clean <- as.data.frame(batch1_DG$cleanDat)
+batch1_DG_clean <- prepare_norm(batch1_DG_clean,anno)
+saveRDS(batch1_DG_clean, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Peptides/CleanWithSampleIDs/batch1_DG_clean_no_GIS.RDS")
 
-Y1Y2_CA <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Peptides/Y1Y2_Amygdala.RDS")
-Y1Y2_CA_clean <- as.data.frame(Y1Y2_CA$cleanDat)
-Y1Y2_CA_clean <- prepare_norm(Y1Y2_CA_clean,anno)
-saveRDS(Y1Y2_CA_clean, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Peptides/CleanWithSampleIDs/Y1Y2_CentralAmyg_clean_no_GIS.RDS")
+batch1_CA <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Peptides/batch1_Amygdala.RDS")
+batch1_CA_clean <- as.data.frame(batch1_CA$cleanDat)
+batch1_CA_clean <- prepare_norm(batch1_CA_clean,anno)
+saveRDS(batch1_CA_clean, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Peptides/CleanWithSampleIDs/batch1_CentralAmyg_clean_no_GIS.RDS")
 
-Y1Y2_mPFC <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Peptides/Y1Y2_mPFC.RDS")
-Y1Y2_mPFC_clean <- as.data.frame(Y1Y2_mPFC$cleanDat)
-Y1Y2_mPFC_clean <- prepare_norm(Y1Y2_mPFC_clean,anno)
-saveRDS(Y1Y2_mPFC_clean, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Peptides/CleanWithSampleIDs/Y1Y2_mPFC_clean_no_GIS.RDS")
+batch1_mPFC <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Peptides/batch1_mPFC.RDS")
+batch1_mPFC_clean <- as.data.frame(batch1_mPFC$cleanDat)
+batch1_mPFC_clean <- prepare_norm(batch1_mPFC_clean,anno)
+saveRDS(batch1_mPFC_clean, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Peptides/CleanWithSampleIDs/batch1_mPFC_clean_no_GIS.RDS")
 
 
 
