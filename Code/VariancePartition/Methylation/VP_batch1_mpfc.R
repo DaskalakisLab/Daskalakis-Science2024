@@ -57,9 +57,9 @@ form <- ~ `AgeDeath`+(1|`Sex`)+`PMI`+`PTSD`+`MDD`+
   `Meth_PC1`+`Meth_PC2`+`Meth_PC3`+`Meth_PC4`+`Meth_PC5`+
   `NeuN_neg`+`NeuN_pos`+`Smoking`
 
-info_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/Y1Y2/All_CentralAmyg.RDS")
-info_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/Y1Y2/All_DG.RDS")
-info_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/Y1Y2/All_mPFC.RDS")
+info_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_CentralAmyg.RDS")
+info_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_DG.RDS")
+info_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_mPFC.RDS")
 
 info_ca <- info_ca[order(info_ca$SampleID),]
 info_dg <- info_dg[order(info_dg$SampleID),]
@@ -98,5 +98,5 @@ expr_mpfc <- as.matrix(expr_mpfc)
 
 
 varPart_mpfc <- fitExtractVarPartModel(expr_mpfc, form, info_mpfc)
-saveRDS(varPart_mpfc, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/VariancePartition/VarPartFiles/Y1Y2/mPFC_neuron.RDS")
+saveRDS(varPart_mpfc, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/VariancePartition/VarPartFiles/batch1/mPFC_neuron.RDS")
 
