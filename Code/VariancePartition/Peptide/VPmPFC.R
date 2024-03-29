@@ -52,9 +52,9 @@ form <- ~ `AgeDeath`+(1|`Sex`)+`PMI`+`PTSD`+`MDD`+
   `PepPC1`+`PepPC2`+`PepPC3`+`PepPC4`+`PepPC5`+
   `ex`+`inhib`+`Astro`+`Micro`+`Oligo`+`OPC`+`Tcell`+`mitoMapped`
 
-info_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/Y1Y2/All_CentralAmyg.RDS")
-info_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/Y1Y2/All_DG.RDS")
-info_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/Y1Y2/All_mPFC.RDS")
+info_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_CentralAmyg.RDS")
+info_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_DG.RDS")
+info_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_mPFC.RDS")
 
 info_ca <- info_ca[order(info_ca$BrNum),]
 info_dg <- info_dg[order(info_dg$BrNum),]
@@ -68,9 +68,9 @@ info_ca <- scale_cont(info_ca)
 info_dg <- scale_cont(info_dg)
 info_mpfc <- scale_cont(info_mpfc)
 
-expr_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Peptides/CleanWithSampleIDs/Y1Y2_CentralAmyg_clean_no_GIS.RDS")
-expr_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Peptides/CleanWithSampleIDs/Y1Y2_DG_clean_no_GIS.RDS")
-expr_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Peptides/CleanWithSampleIDs/Y1Y2_mPFC_clean_no_GIS.RDS")
+expr_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Peptides/CleanWithSampleIDs/batch1_CentralAmyg_clean_no_GIS.RDS")
+expr_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Peptides/CleanWithSampleIDs/batch1_DG_clean_no_GIS.RDS")
+expr_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Peptides/CleanWithSampleIDs/batch1_mPFC_clean_no_GIS.RDS")
 
 
 expr_ca <- as.data.frame(expr_ca)
@@ -92,8 +92,8 @@ expr_mpfc <- expr_mpfc[,rownames(info_mpfc)]
 expr_mpfc <- as.matrix(expr_mpfc)
 
 varPart_mpfc <- fitExtractVarPartModel(expr_mpfc, form, info_mpfc)
-if(!dir.exists("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Peptides/VarPartFiles/Y1Y2")){
-  dir.create("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Peptides/VarPartFiles/Y1Y2", recursive = T)
+if(!dir.exists("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Peptides/VarPartFiles/batch1")){
+  dir.create("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Peptides/VarPartFiles/batch1", recursive = T)
 }
-saveRDS(varPart_mpfc, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Peptides/VarPartFiles/Y1Y2/mPFC.RDS")
+saveRDS(varPart_mpfc, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/VariancePartition/Peptides/VarPartFiles/batch1/mPFC.RDS")
 
