@@ -15,10 +15,10 @@ cd $WORKING_DIR
 plink_location=/data/humgen/daskalakislab/dipietro/SciencePaper/Data/GlobalAncestry/Requirements/plink
 
 #User: Write the name of the PLINK bed/bim/fam 
-bfile=PTSD_Y3_n81.maf01.rsids
+bfile=PTSD_batch2_n81.maf01.rsids
 
 #User: Give the folder where this PLINK binary is stored 
-bfile_directory=/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Genotype/GenotypeY3/
+bfile_directory=/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Genotype/Genotypebatch2/
   
   #User: Location of SNPweights (Download from http://www.hsph.harvard.edu/alkes-price/software/)
   snpweights_path=/data/humgen/daskalakislab/dipietro/SciencePaper/Data/GlobalAncestry/Requirements/SNPweights2.1/inferancestry.py
