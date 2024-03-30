@@ -138,9 +138,9 @@ results.to_csv("/path/to/results)
 missing.to_csv("/path/to/,missing", index=False)
 
 rej, correctedvals = fdrcorrection(fdrframes["Med_pval"], method='poscorr')
-# results.to_csv("//path/tomedResults.csv", index=False)
+# results.to_csv("/path/tomedResults.csv", index=False)
 fdrframes["pval_fdrcorr"], fdrframes["decision_corr"] = correctedvals.T, rej.T
-fdrframes.to_csv("//path/tofdRResults_prem.csv", index=False)
+fdrframes.to_csv("/path/tofdRResults_prem.csv", index=False)
 
 
 print('done')
