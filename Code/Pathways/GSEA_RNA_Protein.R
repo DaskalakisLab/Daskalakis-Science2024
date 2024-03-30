@@ -35,17 +35,17 @@ run_GSEA_GO <- function(in_dirs, out_dir, minSize = 20, maxSize = 500) {
 }
 
 in_dirs <- c(
-  "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Metafor/BetaSD/Baseline/RNA/Genes/PTSD_mPFC_beta_sd.RDS",
-  "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Metafor/BetaSD/Baseline/RNA/Genes/PTSD_DG_beta_sd.RDS",
-  "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Metafor/BetaSD/Baseline/RNA/Genes/PTSD_CentralAmyg_beta_sd.RDS",
-  "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Metafor/BetaSD/Baseline/RNA/Genes/MDD_mPFC_beta_sd.RDS",
-  "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Metafor/BetaSD/Baseline/RNA/Genes/MDD_DG_beta_sd.RDS",
-  "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Metafor/BetaSD/Baseline/RNA/Genes/MDD_CentralAmyg_beta_sd.RDS"
+  "/path/to/Genes/PTSD_mPFC_beta_sd.RDS",
+  "/path/to/Genes/PTSD_DG_beta_sd.RDS",
+  "/path/to/Genes/PTSD_CentralAmyg_beta_sd.RDS",
+  "/path/to/Genes/MDD_mPFC_beta_sd.RDS",
+  "/path/to/Genes/MDD_DG_beta_sd.RDS",
+  "/path/to/Genes/MDD_CentralAmyg_beta_sd.RDS"
 )
 
 run_GSEA_GO(
   in_dirs = in_dirs,
-  out_dir = "/data/humgen/daskalakislab/csnijders/GSEA/gsea_nov2023/gsea_RNA_META_allGO/"
+  out_dir = "path/to/gsea_RNA_META_allGO/"
 )
 
 #################################################################################################################################################
@@ -78,17 +78,17 @@ run_GSEA_GO <- function(in_dirs, out_dir, minSize = 20, maxSize = 500) {
 }
 
 in_dirs <- c(
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/BetaSD/Baseline/Protein/Proteins/PTSD_mPFC_beta_sd.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/BetaSD/Baseline/Protein/Proteins/PTSD_DG_beta_sd.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/BetaSD/Baseline/Protein/Proteins/PTSD_CentralAmyg_beta_sd.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/BetaSD/Baseline/Protein/Proteins/MDD_mPFC_beta_sd.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/BetaSD/Baseline/Protein/Proteins/MDD_DG_beta_sd.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/BetaSD/Baseline/Protein/Proteins/MDD_CentralAmyg_beta_sd.RDS"
+  "/path/to/Proteins/PTSD_mPFC_beta_sd.RDS",
+  "/path/to/Proteins/PTSD_DG_beta_sd.RDS",
+  "/path/to/Proteins/PTSD_CentralAmyg_beta_sd.RDS",
+  "/path/to/Proteins/MDD_mPFC_beta_sd.RDS",
+  "/path/to/Proteins/MDD_DG_beta_sd.RDS",
+  "/path/to/Proteins/MDD_CentralAmyg_beta_sd.RDS"
 )
 
 run_GSEA_GO(
   in_dirs = in_dirs,
-  out_dir = "/data/humgen/daskalakislab/csnijders/GSEA/gsea_nov2023/gsea_Protein_META_allGO/"
+  out_dir = "/path/to/result/gsea_Protein_META_allGO/"
 )
 
 ###########################################################################################################################################
@@ -122,17 +122,17 @@ run_GSEA_GO <- function(in_dirs, out_dir, minSize = 20, maxSize = 500) {
 }
 
 in_dirs <- c(
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/Baseline/RNA/Genes/novaSeq_initial_meta/PTSD_mPFC.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/Baseline/RNA/Genes/novaSeq_initial_meta/PTSD_DG.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/Baseline/RNA/Genes/novaSeq_initial_meta/PTSD_CentralAmyg.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/Baseline/RNA/Genes/novaSeq_initial_meta/MDD_mPFC.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/Baseline/RNA/Genes/novaSeq_initial_meta/MDD_DG.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/Baseline/RNA/Genes/novaSeq_initial_meta/MDD_CentralAmyg.RDS"
+  "/path/to/rep/PTSD_mPFC.RDS",
+  "/path/to/rep/PTSD_DG.RDS",
+  "/path/to/rep/PTSD_CentralAmyg.RDS",
+  "/path/to/rep/MDD_mPFC.RDS",
+  "/path/to/rep/MDD_DG.RDS",
+  "/path/to/rep/MDD_CentralAmyg.RDS"
 )
 
 run_GSEA_GO(
   in_dirs = in_dirs,
-  out_dir = "/data/humgen/daskalakislab/csnijders/GSEA/gsea_nov2023/gsea_RNA_allGO/"
+  out_dir = "/path/to/result/gsea_RNA_allGO/"
 )
 
 #################################################################################################################################################
@@ -165,17 +165,17 @@ run_GSEA_GO <- function(in_dirs, out_dir, minSize = 20, maxSize = 500) {
 }
 
 in_dirs <- c(
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/PTSD/results_PTSD_mPFC_PTSD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/PTSD/results_PTSD_DG_PTSD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/PTSD/results_PTSD_CentralAmyg_PTSD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/MDD/results_MDD_mPFC_MDD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/MDD/results_MDD_DG_MDD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/MDD/results_MDD_CentralAmyg_MDD.RDS"
+  "/path/to/Proteins/PTSD/results_PTSD_mPFC_PTSD.RDS",
+  "/path/to/Proteins/PTSD/results_PTSD_DG_PTSD.RDS",
+  "/path/to/Proteins/PTSD/results_PTSD_CentralAmyg_PTSD.RDS",
+  "/path/to/Proteins/MDD/results_MDD_mPFC_MDD.RDS",
+  "/path/to/Proteins/MDD/results_MDD_DG_MDD.RDS",
+  "/path/to/Proteins/MDD/results_MDD_CentralAmyg_MDD.RDS"
 )
 
 run_GSEA_GO(
   in_dirs = in_dirs,
-  out_dir = "/data/humgen/daskalakislab/csnijders/GSEA/gsea_nov2023/gsea_Protein_allGO/"
+  out_dir = "/path/to/result/gsea_Protein_allGO/"
 )
 
 ################################################################################################################################
@@ -208,13 +208,13 @@ run_GSEA_GO <- function(in_dirs, out_dir, minSize = 20, maxSize = 500) {
 }
 
 in_dirs <- c(
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/RNA/Genes/BU/PTSD/results_PTSD_vmPFC_PTSD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/RNA/Genes/BU/MDD/results_MDD_vmPFC_MDD.RDS"
+  "/path/to/BU/PTSD/results_PTSD_vmPFC_PTSD.RDS",
+  "/path/to/BU/MDD/results_MDD_vmPFC_MDD.RDS"
 )
 
 run_GSEA_GO(
   in_dirs = in_dirs,
-  out_dir = "/data/humgen/daskalakislab/csnijders/GSEA/gsea_nov2023/gsea_RNA_BU_allGO/"
+  out_dir = "/path/to/result/gsea_RNA_BU_allGO/"
 )
 
 #################################################################################################################################################
@@ -247,17 +247,17 @@ run_GSEA_GO <- function(in_dirs, out_dir, minSize = 20, maxSize = 500) {
 }
 
 in_dirs <- c(
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/discovery/PTSD/results_PTSD_mPFC_PTSD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/discovery/PTSD/results_PTSD_DG_PTSD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/discovery/PTSD/results_PTSD_CentralAmyg_PTSD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/discovery/MDD/results_MDD_mPFC_MDD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/discovery/MDD/results_MDD_DG_MDD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/LimmaResults/Protein/Proteins/discovery/MDD/results_MDD_CentralAmyg_MDD.RDS"
+  "/path/to/Proteins/discovery/PTSD/results_PTSD_mPFC_PTSD.RDS",
+  "/path/to/Proteins/discovery/PTSD/results_PTSD_DG_PTSD.RDS",
+  "/path/to/Proteins/discovery/PTSD/results_PTSD_CentralAmyg_PTSD.RDS",
+  "/path/to/Proteins/discovery/MDD/results_MDD_mPFC_MDD.RDS",
+  "/path/to/Proteins/discovery/MDD/results_MDD_DG_MDD.RDS",
+  "/path/to/Proteins/discovery/MDD/results_MDD_CentralAmyg_MDD.RDS"
 )
 
 run_GSEA_GO(
   in_dirs = in_dirs,
-  out_dir = "/data/humgen/daskalakislab/csnijders/GSEA/gsea_nov2023/gsea_Protein_MEGA_allGO/"
+  out_dir = "/path/to/result/gsea_Protein_MEGA_allGO/"
 )
 
 ###########################################################################################################################################
@@ -290,17 +290,17 @@ run_GSEA_GO <- function(in_dirs, out_dir, minSize = 20, maxSize = 500) {
 }
 
 in_dirs <- c(
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/RNA/Limma_Results/Gene/discovery/PTSD/results_PTSD_mPFC_PTSD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/RNA/Limma_Results/Gene/discovery/PTSD/results_PTSD_DG_PTSD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/RNA/Limma_Results/Gene/discovery/PTSD/results_PTSD_CentralAmyg_PTSD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/RNA/Limma_Results/Gene/discovery/MDD/results_MDD_mPFC_MDD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/RNA/Limma_Results/Gene/discovery/MDD/results_MDD_DG_MDD.RDS",
-  "/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/RNA/Limma_Results/Gene/discovery/MDD/results_MDD_CentralAmyg_MDD.RDS"
+  "/path/to/Gene/discovery/PTSD/results_PTSD_mPFC_PTSD.RDS",
+  "/path/to/Gene/discovery/PTSD/results_PTSD_DG_PTSD.RDS",
+  "/path/to/Gene/discovery/PTSD/results_PTSD_CentralAmyg_PTSD.RDS",
+  "/path/to/Gene/discovery/MDD/results_MDD_mPFC_MDD.RDS",
+  "/path/to/Gene/discovery/MDD/results_MDD_DG_MDD.RDS",
+  "/path/to/Gene/discovery/MDD/results_MDD_CentralAmyg_MDD.RDS"
 )
 
 run_GSEA_GO(
   in_dirs = in_dirs,
-  out_dir = "/data/humgen/daskalakislab/csnijders/GSEA/gsea_nov2023/gsea_RNA_MEGA_allGO/"
+  out_dir = "/path/to/result/gsea_RNA_MEGA_allGO/"
 )
 
 #####################################################################################################################################
