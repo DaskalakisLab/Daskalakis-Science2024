@@ -2,7 +2,7 @@
 # Code and comments by Aarti Jajoo
 setwd('/path/to/working/dir/')
 # adding path to packages 
-#.libPaths(c(.libPaths(),"/home/ajajoo/R/x86_64-pc-linux-gnu-library/3.6/"))
+#.libPaths(c(.libPaths(),"/path/to/R/x86_64-pc-linux-gnu-library/3.6/"))
 ####---Load Libraries----####
 library(knitr)
 library(limma)
