@@ -1,55 +1,55 @@
-# Rerun Limma for gene data Y1Y2 and Y3
-# Add sign of logfc for Y1Y2 and Y3 to meta results
+# Rerun Limma for gene data batch1 and batch2
+# Add sign of logfc for batch1 and batch2 to meta results
 library(metafor)
 
-# meta_analyze <- function(y1y2_file, y3_file, outfile, type){
-#   y12 <- readRDS(y1y2_file)
-#   y3 <- readRDS(y3_file)
+# meta_analyze <- function(batch1_file, batch2_file, outfile, type){
+#   y12 <- readRDS(batch1_file)
+#   batch2 <- readRDS(batch2_file)
 #   
 #   if(type=="peptide"){
 #     names(y12)[names(y12)=="peptide"] <- "peptide_full"
-#     names(y3)[names(y3)=="peptide"] <- "peptide_full"
+#     names(batch2)[names(batch2)=="peptide"] <- "peptide_full"
 #     
 #     y12$peptide <- gsub("\\|\\dx.*", "", y12$peptide_full)
-#     y3$peptide <- gsub("\\|\\dx.*", "", y3$peptide_full)
+#     batch2$peptide <- gsub("\\|\\dx.*", "", batch2$peptide_full)
 #   }
 #   
-#   keep.genes <- intersect(y12[[type]], y3[[type]])
+#   keep.genes <- intersect(y12[[type]], batch2[[type]])
 #   y12 <- y12[match(keep.genes, y12[[type]]),]
-#   y3 <- y3[match(keep.genes, y3[[type]]),]
-#   print(identical(y12[[type]], y3[[type]]))
+#   batch2 <- batch2[match(keep.genes, batch2[[type]]),]
+#   print(identical(y12[[type]], batch2[[type]]))
 #   
 #   if(type=="gene"){
-#     df <- data.frame(gene=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-#                      fc_y12=y12$logFC, fc_y3=y3$logFC)
+#     df <- data.frame(gene=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+#                      fc_y12=y12$logFC, fc_batch2=batch2$logFC)
 #   }
 #   if(type=="protein"){
-#     df <- data.frame(protein=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-#                      fc_y12=y12$logFC, fc_y3=y3$logFC)
+#     df <- data.frame(protein=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+#                      fc_y12=y12$logFC, fc_batch2=batch2$logFC)
 #   }
 #   if(type=="peptide"){
-#     df <- data.frame(peptide=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-#                      fc_y12=y12$logFC, fc_y3=y3$logFC)
+#     df <- data.frame(peptide=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+#                      fc_y12=y12$logFC, fc_batch2=batch2$logFC)
 #   }
 #   if(type=="exon"){
-#     df <- data.frame(exon=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-#                      fc_y12=y12$logFC, fc_y3=y3$logFC)
+#     df <- data.frame(exon=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+#                      fc_y12=y12$logFC, fc_batch2=batch2$logFC)
 #   }
 #   if(type=="jx"){
-#     df <- data.frame(jx=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-#                      fc_y12=y12$logFC, fc_y3=y3$logFC)
+#     df <- data.frame(jx=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+#                      fc_y12=y12$logFC, fc_batch2=batch2$logFC)
 #   }
 #   if(type=="tx"){
-#     df <- data.frame(tx=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-#                      fc_y12=y12$logFC, fc_y3=y3$logFC)
+#     df <- data.frame(tx=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+#                      fc_y12=y12$logFC, fc_batch2=batch2$logFC)
 #   }
 #   if(type=="meth"){
-#     df <- data.frame(meth=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-#                      fc_y12=y12$logFC, fc_y3=y3$logFC)
+#     df <- data.frame(meth=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+#                      fc_y12=y12$logFC, fc_batch2=batch2$logFC)
 #   }
 #   
 #   met=function(x) {
-#     y=rma(as.numeric(x[c("fc_y12","fc_y3")]), sei=as.numeric(x[c("se_y12","se_y3")]), method = "FE")
+#     y=rma(as.numeric(x[c("fc_y12","fc_batch2")]), sei=as.numeric(x[c("se_y12","se_batch2")]), method = "FE")
 #     y=c(y$b,y$beta,y$se,y$zval,y$pval,y$ci.lb,y$ci.ub,y$tau2,y$I2)
 #     y
 #   }
@@ -67,15 +67,15 @@ library(metafor)
 # }
 
 
-meta_analyze <- function(y1y2_file, y3_file, outfile, type){
-  y12 <- readRDS(y1y2_file)
-  y3 <- readRDS(y3_file)
+meta_analyze <- function(batch1_file, batch2_file, outfile, type){
+  y12 <- readRDS(batch1_file)
+  batch2 <- readRDS(batch2_file)
   
   if(type=="peptide"){
     names(y12)[names(y12)=="peptide"] <- "peptide_full"
-    names(y3)[names(y3)=="peptide"] <- "peptide_full"
+    names(batch2)[names(batch2)=="peptide"] <- "peptide_full"
     y12$peptide=y12$peptide_full
-     y3$peptide=y3$peptide_full
+     batch2$peptide=batch2$peptide_full
     
     
     lo=1
@@ -94,16 +94,16 @@ meta_analyze <- function(y1y2_file, y3_file, outfile, type){
           }
           
     lo=1
-          for(ixx in 1:nrow(y3)){
-            kkk=nchar(y3$peptide_full[ixx])
-            pos=gregexpr(pattern= "xTMTpro",y3$peptide_full[ixx])
+          for(ixx in 1:nrow(batch2)){
+            kkk=nchar(batch2$peptide_full[ixx])
+            pos=gregexpr(pattern= "xTMTpro",batch2$peptide_full[ixx])
             pos=unlist(pos)
             if(pos[1]>0 && (pos[length(pos)]+15)==kkk){
-              y3$peptide[ixx]=substr(y3$peptide_full[ixx],1,pos[1]-3)
+              batch2$peptide[ixx]=substr(batch2$peptide_full[ixx],1,pos[1]-3)
               lo=lo+1
             }
             if(pos[1]>0 && (pos[length(pos)]+15)!=kkk){
-              y3$peptide[ixx]=paste0(substr(y3$peptide_full[ixx],1,pos[1]-3),substr(y3$peptide_full[ixx],(pos[length(pos)]+16),kkk))
+              batch2$peptide[ixx]=paste0(substr(batch2$peptide_full[ixx],1,pos[1]-3),substr(batch2$peptide_full[ixx],(pos[length(pos)]+16),kkk))
               lo=lo+1
             }
           }
@@ -112,41 +112,41 @@ meta_analyze <- function(y1y2_file, y3_file, outfile, type){
     
     
    # y12$peptide <- gsub("\\|\\dx.*", "", y12$peptide_full)
-    #y3$peptide <- gsub("\\|\\dx.*", "", y3$peptide_full)
+    #batch2$peptide <- gsub("\\|\\dx.*", "", batch2$peptide_full)
   }
   
-  keep.genes <- intersect(y12[[type]], y3[[type]])
+  keep.genes <- intersect(y12[[type]], batch2[[type]])
   y12 <- y12[match(keep.genes, y12[[type]]),]
-  y3 <- y3[match(keep.genes, y3[[type]]),]
-  print(identical(y12[[type]], y3[[type]]))
+  batch2 <- batch2[match(keep.genes, batch2[[type]]),]
+  print(identical(y12[[type]], batch2[[type]]))
   
   if(type=="gene"){
-    df <- data.frame(gene=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-                     fc_y12=y12$logFC, fc_y3=y3$logFC)
+    df <- data.frame(gene=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+                     fc_y12=y12$logFC, fc_batch2=batch2$logFC)
   }
   if(type=="protein"){
-    df <- data.frame(protein=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-                     fc_y12=y12$logFC, fc_y3=y3$logFC)
+    df <- data.frame(protein=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+                     fc_y12=y12$logFC, fc_batch2=batch2$logFC)
   }
   if(type=="peptide"){
-    df <- data.frame(peptide=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-                     fc_y12=y12$logFC, fc_y3=y3$logFC)
+    df <- data.frame(peptide=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+                     fc_y12=y12$logFC, fc_batch2=batch2$logFC)
   }
   if(type=="exon"){
-    df <- data.frame(exon=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-                     fc_y12=y12$logFC, fc_y3=y3$logFC)
+    df <- data.frame(exon=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+                     fc_y12=y12$logFC, fc_batch2=batch2$logFC)
   }
   if(type=="jx"){
-    df <- data.frame(jx=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-                     fc_y12=y12$logFC, fc_y3=y3$logFC)
+    df <- data.frame(jx=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+                     fc_y12=y12$logFC, fc_batch2=batch2$logFC)
   }
   if(type=="tx"){
-    df <- data.frame(tx=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-                     fc_y12=y12$logFC, fc_y3=y3$logFC)
+    df <- data.frame(tx=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+                     fc_y12=y12$logFC, fc_batch2=batch2$logFC)
   }
   if(type=="meth"){
-    df <- data.frame(meth=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_y3=y3$SE,
-                     fc_y12=y12$logFC, fc_y3=y3$logFC)
+    df <- data.frame(meth=y12[[type]], symbol=y12$symbol, se_y12=y12$SE, se_batch2=batch2$SE,
+                     fc_y12=y12$logFC, fc_batch2=batch2$logFC)
   }
   
   input <- df
