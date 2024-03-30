@@ -57,9 +57,9 @@ form <- ~ `AgeDeath`+(1|`Sex`)+`PMI`+`PTSD`+`MDD`+
   `Meth_PC1`+`Meth_PC2`+`Meth_PC3`+`Meth_PC4`+`Meth_PC5`+
   `NeuN_neg`+`NeuN_pos`+`Smoking`
 
-info_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_CentralAmyg.RDS")
-info_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_DG.RDS")
-info_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/VariancePartition/InfoFiles/batch1/All_mPFC.RDS")
+info_ca <- readRDS("/path/to/RNA/VariancePartition/InfoFiles/batch1/All_CentralAmyg.RDS")
+info_dg <- readRDS("/path/to/RNA/VariancePartition/InfoFiles/batch1/All_DG.RDS")
+info_mpfc <- readRDS("/path/to/RNA/VariancePartition/InfoFiles/batch1/All_mPFC.RDS")
 
 info_ca <- info_ca[order(info_ca$SampleID),]
 info_dg <- info_dg[order(info_dg$SampleID),]
@@ -73,9 +73,9 @@ info_ca <- scale_cont(info_ca)
 info_dg <- scale_cont(info_dg)
 info_mpfc <- scale_cont(info_mpfc)
 
-expr_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/CentralAmygMfunnorm.RDS")
-expr_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/DGMfunnorm.RDS")
-expr_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/mPFCMfunnorm.RDS")
+expr_ca <- readRDS("/path/to/Methylation/AartiNormalized/CentralAmygMfunnorm.RDS")
+expr_dg <- readRDS("/path/to/Methylation/AartiNormalized/DGMfunnorm.RDS")
+expr_mpfc <- readRDS("/path/to/Methylation/AartiNormalized/mPFCMfunnorm.RDS")
 
 
 expr_ca <- as.data.frame(expr_ca)
@@ -98,5 +98,5 @@ expr_mpfc <- as.matrix(expr_mpfc)
 
 
 varPart_mpfc <- fitExtractVarPartModel(expr_mpfc, form, info_mpfc)
-saveRDS(varPart_mpfc, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/VariancePartition/VarPartFiles/batch1/mPFC_neuron.RDS")
+saveRDS(varPart_mpfc, "/path/to/Methylation/VariancePartition/VarPartFiles/batch1/mPFC_neuron.RDS")
 
