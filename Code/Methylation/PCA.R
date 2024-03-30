@@ -46,6 +46,6 @@ PC_mpfc <- calculate_PCs(expr_mpfc)
 PC_mpfc <- as.data.frame(PC_mpfc)
 
 
-saveRDS(PC_ca, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/PCA/Y1Y2/PCA_CentralAmyg.RDS")
-saveRDS(PC_dg, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/PCA/Y1Y2/PCA_DG.RDS")
-saveRDS(PC_mpfc, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/PCA/Y1Y2/PCA_mPFC.RDS")
+saveRDS(PC_ca, "/path/to/PCA_CentralAmyg.RDS")
+saveRDS(PC_dg, "/path/to/PCA_DG.RDS")
+saveRDS(PC_mpfc, "/path/to/PCA_mPFC.RDS")
