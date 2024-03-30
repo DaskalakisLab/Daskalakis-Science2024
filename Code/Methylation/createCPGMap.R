@@ -19,4 +19,4 @@ df$UCSC_RefGene_Name <- gsub(";.*", "", df$UCSC_RefGene_Name)
 df[df$UCSC_RefGene_Name=="", "UCSC_RefGene_Name"] <- df[df$UCSC_RefGene_Name=="", "Name"]
 names(df) <- c("cpg", "symbol")
 
-saveRDS(df, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/CPGMap/cpgMap.RDS")
+saveRDS(df, "/path/to/result")
