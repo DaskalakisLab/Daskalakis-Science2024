@@ -73,7 +73,7 @@ meta_analyze <- function(b32,b15,bM,bF, celltype,comparison, out_dir){
   results_sup <- results_sup %>% dplyr::select(genes, beta, pval, FDR, tau2, I2, 
                                                sign_logFC_b32,sign_logFC_b15,sign_logFC_bM,sign_logFC_bF,p_sig_b32,p_sig_b15,p_sig_bM,p_sig_bF,fdr_sig_b32,fdr_sig_b15,fdr_sig_bM,fdr_sig_bF,same_sign)
   
-  write.csv(results_sup, file = paste0("/Volumes/humgen/daskalakislab/aiatrou/Science/2024/January/Meta-analysis/sup_tables/", celltype,"_", comparison, ".csv"), quote = F)
+  write.csv(results_sup, file = paste0("/path/to/results/", celltype,"_", comparison, ".csv"), quote = F)
   
 }
 
@@ -145,7 +145,7 @@ meta_analyze3 <- function(b32,b15,bF, celltype,comparison, out_dir){
   results_sup <- results_sup %>% dplyr::select(genes, beta, pval, FDR, tau2, I2, 
                                                sign_logFC_b32,sign_logFC_b15,sign_logFC_bF,p_sig_b32,p_sig_b15,p_sig_bF,fdr_sig_b32,fdr_sig_b15,fdr_sig_bF,same_sign)
   
-  write.csv(results_sup, file = paste0("/Volumes/humgen/daskalakislab/aiatrou/Science/2024/January/Meta-analysis/sup_tables/", celltype,"_", comparison, ".csv"), quote = F)
+  write.csv(results_sup, file = paste0("/path/to/results/", celltype,"_", comparison, ".csv"), quote = F)
   
   
 }
@@ -158,13 +158,13 @@ cell_types2 <- c("Endo", "OPC", "Oligo", "Micro","In_RE", "Ex_RE", "Astro_RE")
 
 for(i in 1:length(cell_types)){
   cell_type = cell_types[i]
-  meta_analyze(b32 = paste0("/Volumes/humgen/daskalakislab/aiatrou/Science/AJP_results/disc/FIN/MDD/", cell_types[i], ".rds"),
-               b15 = paste0("/Volumes/humgen/daskalakislab/aiatrou/Science/AJP_results/repl/FIN/MDD/", cell_types[i], ".rds"),
-               bM = paste0("/Volumes/humgen/daskalakislab/aiatrou/Science/2024/January/Maitra_Nagy/pseudobulk/LimmaResults_M_1cpm10pct_model1/Fine_Clusters/MDD/DEGs_MDD_", cell_types2[i], ".RDS"), 
-               bF = paste0("/Volumes/humgen/daskalakislab/aiatrou/Science/2024/January/Maitra_Nagy/pseudobulk/LimmaResults_F_1cpm10pct_model1/Fine_Clusters/MDD/DEGs_MDD_", cell_types2[i], ".RDS"), 
+  meta_analyze(b32 = paste0("/path/to/AJP_results/disc/FIN/MDD/", cell_types[i], ".rds"),
+               b15 = paste0("/path/to/AJP_results/repl/FIN/MDD/", cell_types[i], ".rds"),
+               bM = paste0("/path/to/2024/January/Maitra_Nagy/pseudobulk/LimmaResults_M_1cpm10pct_model1/Fine_Clusters/MDD/DEGs_MDD_", cell_types2[i], ".RDS"), 
+               bF = paste0("/path/to/2024/January/Maitra_Nagy/pseudobulk/LimmaResults_F_1cpm10pct_model1/Fine_Clusters/MDD/DEGs_MDD_", cell_types2[i], ".RDS"), 
                celltype = paste0(cell_type),
                comparison = "4way", 
-               out_dir =  "/Volumes/humgen/daskalakislab/aiatrou/Science/2024/January/Meta-analysis/MDD/")
+               out_dir =  "/path/to/2024/January/Meta-analysis/MDD/")
   
 }
 
@@ -175,11 +175,11 @@ cell_types2 <- c("Endo", "OPC", "Oligo", "Micro","In_RE", "Ex_RE", "Astro_RE")
 
 for(i in 1:length(cell_types)){
   cell_type = cell_types[i]
-  meta_analyze3(b32 = paste0("/Volumes/humgen/daskalakislab/aiatrou/Science/AJP_results/disc/FIN/MDD/", cell_types[i], ".rds"),
-               b15 = paste0("/Volumes/humgen/daskalakislab/aiatrou/Science/AJP_results/repl/FIN/MDD/", cell_types[i], ".rds"),
-               bF = paste0("/Volumes/humgen/daskalakislab/aiatrou/Science/2024/January/Maitra_Nagy/pseudobulk/LimmaResults_F_1cpm10pct_model1/Fine_Clusters/MDD/DEGs_MDD_", cell_types2[i], ".RDS"), 
+  meta_analyze3(b32 = paste0("/path/to/AJP_results/disc/FIN/MDD/", cell_types[i], ".rds"),
+               b15 = paste0("/path/to/AJP_results/repl/FIN/MDD/", cell_types[i], ".rds"),
+               bF = paste0("/path/to/2024/January/Maitra_Nagy/pseudobulk/LimmaResults_F_1cpm10pct_model1/Fine_Clusters/MDD/DEGs_MDD_", cell_types2[i], ".RDS"), 
                celltype = paste0(cell_type),
                comparison = "3way", 
-               out_dir =  "/Volumes/humgen/daskalakislab/aiatrou/Science/2024/January/Meta-analysis/MDD/")
+               out_dir =  "/path/to/2024/January/Meta-analysis/MDD/")
   
 }
