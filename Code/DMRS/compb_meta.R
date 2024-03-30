@@ -1,17 +1,17 @@
 library(ENmix)
 library(minfi)
 library(stringr)
-source("/data/humgen/daskalakislab/aiatrou/Science/Manuscript_panels/Methylation/combp_mod_meta.R")
-pathRes <-"/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Metafor/BetaSD/Baseline/Methylation/"
-pathResult <- "/data/humgen/daskalakislab/aiatrou/Science/Manuscript_panels/Methylation/DMR_META_p0001/"
+source("/path/to/combp_mod_meta.R")
+pathRes <-"/path/to/Methylation/results/"
+pathResult <- "/path/to/DMR_META_p0001/"
 dir.create(pathResult, recursive = T)
 setwd(pathResult)
-pathMo <-"/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Methylation/"
+pathMeth2 <-"/path/to/Methylation/input/data/"
 
 files_meta <- list.files(pathRes, pattern = "beta_sd.RDS", recursive = TRUE)
 files_meta <- files_meta[c(1:5, 9)]
 
-files <- list.files(pathMo,pattern = "annotation",recursive = TRUE)
+files <- list.files(pathMeth2,pattern = "annotation",recursive = TRUE)
 files <- files[grep("discovery",files)]
 # dir.create(pathResult)
 
@@ -43,7 +43,7 @@ for (ilimma in 1:length(files)){
   print(files_meta[ilimma])
   
   
-  expr <- readRDS(paste0(pathMo,gsub("annotation","expression",files[ilimma])))
+  expr <- readRDS(paste0(pathMeth2,gsub("annotation","expression",files[ilimma])))
   grset <- makeGenomicRatioSetFromMatrix(mat = as.matrix(expr), 
                                          array = "IlluminaHumanMethylationEPIC", annotation = "ilm10b4.hg19", 
                                          what = "M")
