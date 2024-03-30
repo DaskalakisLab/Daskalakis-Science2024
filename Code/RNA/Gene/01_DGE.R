@@ -2,13 +2,13 @@ library(SummarizedExperiment)
 library(edgeR)
 
 # Load data file
-load("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Bulk/rse_gene.batch13_n688.Rdata")
+load("/path/to/Data/RNA/Bulk/rse_gene.batch13_n688.Rdata")
 
 dcount=assays(rse_gene)[[1]]
 dcount <- as.data.frame(dcount)
 
-annobatch1 <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_batch1.RDS")
-annobatch2 <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_batch2.RDS")
+annobatch1 <- readRDS("/path/to/Data/Annotation/Annotation_batch1.RDS")
+annobatch2 <- readRDS("/path/to/Data/Annotation/Annotation_batch2.RDS")
 
 ca_batch1 <- unique(annobatch1[annobatch1$Brain_Region=="CentralAmyg", "SampleID"])
 dg_batch1 <- unique(annobatch1[annobatch1$Brain_Region=="DG", "SampleID"])
@@ -66,11 +66,11 @@ setdiff(rownames(dge_dg_batch2$samples), dg_batch2)
 setdiff(rownames(dge_mpfc_batch2$samples), mpfc_batch2)
 
 
-saveRDS(dge_ca_batch1, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch1/DGE_CentralAmyg.RDS")
-saveRDS(dge_dg_batch1, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch1/DGE_DG.RDS")
-saveRDS(dge_mpfc_batch1, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch1/DGE_mPFC.RDS")
+saveRDS(dge_ca_batch1, "/path/to/Data/RNA/Counts/Gene/batch1/DGE_CentralAmyg.RDS")
+saveRDS(dge_dg_batch1, "/path/to/Data/RNA/Counts/Gene/batch1/DGE_DG.RDS")
+saveRDS(dge_mpfc_batch1, "/path/to/Data/RNA/Counts/Gene/batch1/DGE_mPFC.RDS")
 
-saveRDS(dge_ca_batch2, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch2/DGE_CentralAmyg.RDS")
-saveRDS(dge_dg_batch2, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch2/DGE_DG.RDS")
-saveRDS(dge_mpfc_batch2, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Counts/Gene/batch2/DGE_mPFC.RDS")
+saveRDS(dge_ca_batch2, "/path/to/Data/RNA/Counts/Gene/batch2/DGE_CentralAmyg.RDS")
+saveRDS(dge_dg_batch2, "/path/to/Data/RNA/Counts/Gene/batch2/DGE_DG.RDS")
+saveRDS(dge_mpfc_batch2, "/path/to/Data/RNA/Counts/Gene/batch2/DGE_mPFC.RDS")
 
