@@ -1,4 +1,4 @@
-Example code provided here for RNA-Genes mPFC.
+Example code provided here for RNA Genes mPFC.
 
 Code to normalize RNA related data and run the subsequent limma analyses. 
 Limma_functions.R contains the functions and wrapper code needed to run all analyses.
