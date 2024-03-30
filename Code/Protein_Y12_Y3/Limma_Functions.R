@@ -306,8 +306,8 @@ limma_wrapper <- function(anno_file, tamp_file, region, dx=NULL, ptsd_vs_mdd = F
   saveRDS(results, paste0(out_folder,"/results_", dx, "_", region, "_", contrast_var, ".RDS"))
 }
 
-# anno_file = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_Y1Y2.RDS"
-# tamp_file =  paste0("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/Y1Y2/Proteins/CleanedWithSampleIDs/Y1Y2_",region,"_clean_no_GIS.RDS")
+# anno_file = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_batch1.RDS"
+# tamp_file =  paste0("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Proteins/CleanedWithSampleIDs/batch1_",region,"_clean_no_GIS.RDS")
 # region = "CentralAmyg"
 # dx="PTSD"
 # ptsd_vs_mdd = F
@@ -316,5 +316,5 @@ limma_wrapper <- function(anno_file, tamp_file, region, dx=NULL, ptsd_vs_mdd = F
 # sex = "M"
 # covariates = c("PTSD","AgeDeath","PMI","ancestryPC1","ancestryPC2","ProtPC1","ProtPC2","ProtPC3","ProtPC4","ProtPC5","mitoMapped")
 # contrast_var = "PTSD"
-# out_folder = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/Limma_Results/Proteins/SexSpecific/Y1Y2/PTSD_Male/"
+# out_folder = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/Limma_Results/Proteins/SexSpecific/batch1/PTSD_Male/"
 # 
