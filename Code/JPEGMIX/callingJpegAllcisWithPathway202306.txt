@@ -65,7 +65,7 @@ ff3<-paste("-d",frac.d)
 ff4<-paste("-j",frac.g)
 
 
-c3=system2("/data/UKBB_Imaging/daskalakis_lab/TWAS/Software/jepegmix2_P_v8",args=c(frac.c, "-r /data/cchatzinakos/30_KG_new/xatzi777.gz", "-i /data/cchatzinakos/30_KG_new/30kg_index.gz", "-a /data/ajajoo/PEC/PECJPEGMIX/June2023/AnnotationForAll.txt",ff1,ff2,ff3,ff4,"--impute","-z 50"),stdout=frac.e,stderr=frac.s)
+c3=system2("/data/UKBB_Imaging/daskalakis_lab/TWAS/Software/jepegmix2_P_v8",args=c(frac.c, "-r /path/to/30_KG_new/xatzi777.gz", "-i /path/to/30_KG_new/30kg_index.gz", "-a /data/ajajoo/PEC/PECJPEGMIX/June2023/AnnotationForAll.txt",ff1,ff2,ff3,ff4,"--impute","-z 50"),stdout=frac.e,stderr=frac.s)
 
 #out1<-frac.c[j]
 
