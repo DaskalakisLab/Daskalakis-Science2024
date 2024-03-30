@@ -3,7 +3,7 @@ library(enrichR)
  
  
 pwd11="/path_to_resutls/"
-atble11=list.files(pwd11)
+table11=list.files(pwd11)
  
  
 listEnrichrSites()
@@ -21,10 +21,10 @@ my_list=list()
 coun=1
  
  
-for(i in 1:length(atble11)){
-  kl=nchar(atble11[i])
-  nxx=substr(atble11[i],1,kl-4)
-  data1=readRDS(paste0(pwd11,atble11[i]))
+for(i in 1:length(table11)){
+  kl=nchar(table11[i])
+  nxx=substr(table11[i],1,kl-4)
+  data1=readRDS(paste0(pwd11,table11[i]))
   data1=as.data.frame(data1)
   data1$beta=data1$logFC
   data1$pval=data1$P.Value
