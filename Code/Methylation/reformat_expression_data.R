@@ -1,24 +1,24 @@
 library(bigreadr)
 
-meth_ca <- fread2("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/Y1Y2/CentralAmygMfunnorm.csv")
+meth_ca <- fread2("/path/to/batch1/CentralAmygMfunnorm.csv")
 rownames(meth_ca) <- meth_ca$V1
 meth_ca <- meth_ca[, 2:ncol(meth_ca)]
 
-meth_dg <- fread2("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/Y1Y2/DGMfunnorm.csv")
+meth_dg <- fread2("/path/to/batch1/DGMfunnorm.csv")
 rownames(meth_dg) <- meth_dg$V1
 meth_dg <- meth_dg[, 2:ncol(meth_dg)]
 
-meth_mpfc <- fread2("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/Y1Y2/mPFCMfunnorm.csv")
+meth_mpfc <- fread2("/path/to/batch1/mPFCMfunnorm.csv")
 rownames(meth_mpfc) <- meth_mpfc$V1
 meth_mpfc <- meth_mpfc[, 2:ncol(meth_mpfc)]
 
 
 
-name_map <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/BrNumMapping/Y1Y2BrNumMap.RDS")
+name_map <- readRDS("/path/to/Methylation/BrNumMapping/batch1BrNumMap.RDS")
 
 
-#name_map <- fread2("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/DNAmsWithDemo.csv")
-anno <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_Y1Y2.RDS")
+#name_map <- fread2("/path/to/Methylation/DNAmsWithDemo.csv")
+anno <- readRDS("/path/to/Annotation/Annotation_batch1.RDS")
 name_map$mergeID <- paste0(name_map$BrNum, "_", name_map$Brain_Region)
 anno$mergeID <- paste0(anno$BrNum, "_", anno$Brain_Region)
 
@@ -40,6 +40,6 @@ for (i in 1:length(names(meth_mpfc))){
   names(meth_mpfc)[i] <- name_map[name_map$MethID==names(meth_mpfc)[i],"SampleID"]
 }
 
-saveRDS(meth_ca, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/Y1Y2/CentralAmygMfunnorm.RDS")
-saveRDS(meth_dg, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/Y1Y2/DGMfunnorm.RDS")
-saveRDS(meth_mpfc, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/Y1Y2/mPFCMfunnorm.RDS")
+saveRDS(meth_ca, "/path/to/batch1/CentralAmygMfunnorm.RDS")
+saveRDS(meth_dg, "/path/to/batch1/DGMfunnorm.RDS")
+saveRDS(meth_mpfc, "/path/to/batch1/mPFCMfunnorm.RDS")
