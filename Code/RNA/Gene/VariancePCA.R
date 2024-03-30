@@ -29,16 +29,16 @@ calculate_PCA <- function(voom_file){
 
 
 # Years 1 and 2
-ca_PCA <- calculate_PCA("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/batch1/VoomCentralAmyg.RDS")
-dg_PCA <- calculate_PCA("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/batch1/VoomDG.RDS")
-mpfc_PCA <- calculate_PCA("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Genes/batch1/VoommPFC.RDS")
+ca_PCA <- calculate_PCA("/path/to/Genes/batch1/VoomCentralAmyg.RDS")
+dg_PCA <- calculate_PCA("/path/to/Genes/batch1/VoomDG.RDS")
+mpfc_PCA <- calculate_PCA("/path/to/Genes/batch1/VoommPFC.RDS")
 
-saveRDS(ca_PCA, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/PCA/batch1/PCA_CentralAmyg.RDS")
-saveRDS(dg_PCA, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/PCA/batch1/PCA_DG.RDS")
-saveRDS(mpfc_PCA, "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/PCA/batch1/PCA_mPFC.RDS")
+saveRDS(ca_PCA, "/path/to/PCA_CentralAmyg.RDS")
+saveRDS(dg_PCA, "/path/to/PCA_DG.RDS")
+saveRDS(mpfc_PCA, "/path/to/PCA_mPFC.RDS")
 
 
-anno <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_batch1.RDS")
+anno <- readRDS("/path/to/Annotation_batch1.RDS")
 anno <- anno[, names(anno)[!(names(anno) %in% c("PC1", "PC2", "PC3", "PC4", "PC5", "PC6", "PC7", "PC8", "PC9", "PC10"))]]
 
 ca_PCA <- merge(ca_PCA, anno, by="SampleID", all.x=T)
