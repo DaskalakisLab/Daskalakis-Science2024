@@ -5,25 +5,25 @@
 #User: Unzip the data, put contents into a working directory
 
 #User:Set path to working directory (i.e. this is where ancestry_pipeline.sh is stored)
-WORKING_DIR="/data/humgen/daskalakislab/dipietro/SciencePaper/Code/GenotypeOperations/global_ancestry-master"
+WORKING_DIR="/path/to/working/dir"
 
 ##Call into WD
 cd $WORKING_DIR
 
 #User: Give the location of the PLINK 2 binary
-plink_location=/data/humgen/daskalakislab/dipietro/SciencePaper/Data/GlobalAncestry/Requirements/plink
+plink_location=/path/to/plink/
 
 #User: Write the name of the PLINK bed/bim/fam 
 bfile=PTSD_batch1_n150.maf01.rsids
 
 #User: Give the folder where this PLINK binary is stored 
-bfile_directory=/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Genotype/Genotypebatch1/
+bfile_directory=/path/to/bfile/
 
 #User: Location of SNPweights (Download from http://www.hsph.harvard.edu/alkes-price/software/)
-snpweights_path=/data/humgen/daskalakislab/dipietro/SciencePaper/Data/GlobalAncestry/Requirements/SNPweights2.1/inferancestry.py
+snpweights_path=/path/to/SNPweights2.1/inferancestry.py
 
 #User: Location of convertf tool from EIGENSOFT (Download from http://www.hsph.harvard.edu/alkes-price/software/)
-eigensoft_loc=/data/humgen/daskalakislab/dipietro/SciencePaper/Data/GlobalAncestry/Requirements/EIG-6.1.4/bin/convertf
+eigensoft_loc=/path/to/EIG-6.1.4/bin/convertf
 
 
 #User: Name of panel chosen ('Default': works for most illumina. AffyBB: Designed for Affy biobank chip. GSA: Designed for Illumina GSA)
