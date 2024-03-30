@@ -96,7 +96,7 @@ create_formula <- function(covariates){
 #   Results with gene symbols
 map_cpg_names <- function(results){
   
-  cpg_map <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/GeneMappings/MethylationMap.RDS")
+  cpg_map <- readRDS("/path/to/GeneMappings/MethylationMap.RDS")
   results <- merge(results, cpg_map, by.x="meth", by.y="cpg", all.x=T)
   
   return(results)
@@ -294,8 +294,8 @@ limma_wrapper <- function(anno_file, expr_file, region, dx=NULL, ptsd_vs_mdd = F
 }
 
 # region="mPFC"
-# anno_file = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_Y1Y2.RDS"
-# expr_file = paste0("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/Y1Y2/",region,"Mfunnorm.RDS")
+# anno_file = "/path/to/Annotation/Annotation_batch1.RDS"
+# expr_file = paste0("/path/to/Methylation/batch1/",region,"Mfunnorm.RDS")
 # region = region
 # dx="PTSD"
 # ptsd_vs_mdd = F
@@ -303,4 +303,4 @@ limma_wrapper <- function(anno_file, expr_file, region, dx=NULL, ptsd_vs_mdd = F
 # type = "meth"
 # covariates = c("PTSD","AgeDeath","PMI","Sex","ancestryPC1","ancestryPC2","Meth_PC1","Meth_PC2","Smoking","NeuN_neg","NeuN_pos")
 # contrast_var = "PTSD"
-# out_folder = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/LimmaResults/Methylation/Y1Y2/PTSD/"
+# out_folder = "/path/to/LimmaResults/Methylation/batch1/PTSD/"
