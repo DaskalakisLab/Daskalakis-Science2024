@@ -18,7 +18,7 @@ prepare_norm <- function(norm_file,anno){
   norm <- readRDS(norm_file)
   norm <- as.data.frame(norm$cleanDat)
   
-  batch_designs <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/Proteomics/batch_designs.RDS")
+  batch_designs <- readRDS("/path/to/Protein/Proteomics/batch_designs.RDS")
   
   batch_designs <- as.data.frame(batch_designs)
   batch_designs$Plate <- gsub("F", "", batch_designs$Plate)
@@ -306,8 +306,8 @@ limma_wrapper <- function(anno_file, tamp_file, region, dx=NULL, ptsd_vs_mdd = F
   saveRDS(results, paste0(out_folder,"/results_", dx, "_", region, "_", contrast_var, ".RDS"))
 }
 
-# anno_file = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_batch1.RDS"
-# tamp_file =  paste0("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/batch1/Proteins/CleanedWithSampleIDs/batch1_",region,"_clean_no_GIS.RDS")
+# anno_file = "/path/to/Annotation/Annotation_batch1.RDS"
+# tamp_file =  paste0("/path/to/Protein/TamporNormalized/batch1/Proteins/CleanedWithSampleIDs/batch1_",region,"_clean_no_GIS.RDS")
 # region = "CentralAmyg"
 # dx="PTSD"
 # ptsd_vs_mdd = F
@@ -316,5 +316,5 @@ limma_wrapper <- function(anno_file, tamp_file, region, dx=NULL, ptsd_vs_mdd = F
 # sex = "M"
 # covariates = c("PTSD","AgeDeath","PMI","ancestryPC1","ancestryPC2","ProtPC1","ProtPC2","ProtPC3","ProtPC4","ProtPC5","mitoMapped")
 # contrast_var = "PTSD"
-# out_folder = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/Limma_Results/Proteins/SexSpecific/batch1/PTSD_Male/"
+# out_folder = "/path/to/Protein/Limma_Results/Proteins/SexSpecific/batch1/PTSD_Male/"
 # 
