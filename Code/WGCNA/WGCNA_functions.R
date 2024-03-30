@@ -40,7 +40,7 @@ calculate_tophubs <- function(datExpr, moduleColors, power.select){
     omitColors = "grey", 
     power = power.select, 
     type = "signed")
-  gene_map <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/GeneMappings/RNAGeneMap.RDS")
+  gene_map <- readRDS("/path/to/GeneMappings/RNAGeneMap.RDS")
   for(i in 1:length(tophub)){
     tophub[[i]] <- gene_map$symbol[match(tophub[[i]], gene_map$genes)]
   }
@@ -51,7 +51,7 @@ calculate_tophubs <- function(datExpr, moduleColors, power.select){
 wgcna_control <- function(data, region, out_dir){
   # setwd(out_dir)
   # Read in phenotype file
-  pheno <- readRDS("/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Annotation/Annotation_Y123_updatedPCs.RDS")
+  pheno <- readRDS("/path/to/Annotation_disc_updatedPCs.RDS")
   pheno <- as.data.frame(pheno)
   
   E <- data[, match(pheno$BrNum, colnames(data))]
@@ -158,7 +158,7 @@ wgcna_control <- function(data, region, out_dir){
        file = paste0(out_dir,"/NetworkConstruction-auto_pwr",power.select,"_control.RData"))
   write.table(MEs1, paste0(out_dir,"/ME_control.csv"))
   
-  gene_map <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/GeneMappings/RNAGeneMap.RDS")
+  gene_map <- readRDS("/path/to/GeneMappings/RNAGeneMap.RDS")
   genes2modules <- matrix(NA, ncol = 3, nrow = length(moduleColors))
   genes2modules <- as.data.frame(genes2modules)
   colnames(genes2modules) <- c("Module", "Gene", "Symbol")
@@ -200,7 +200,7 @@ wgcna_ptsd_mdd <- function(data, region, out_dir, power, nc){
   # setwd(out_dir)
   load(paste0(out_dir,"/moduleColors.RData"))
   #Prepare datasets
-  pheno <- readRDS("/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Annotation/Annotation_Y123_updatedPCs.RDS")
+  pheno <- readRDS("/path/to/Annotation_disc_updatedPCs.RDS")
   pheno <- as.data.frame(pheno)
   
   E <- data[, match(pheno$BrNum, colnames(data))]
