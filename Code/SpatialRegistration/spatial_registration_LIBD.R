@@ -14,7 +14,7 @@ dir_input <- here::here(
   "spe",
   "07_layer_differential_expression"
 )
-dir_input <- "/data/humgen/daskalakislab/jajoo/SciencePaper/DLPFCSpatialEnrichment/spatialDLPFC/processed-data/rdata/spe/07_layer_differential_expression/" 
+dir_input <- "/path/to/spe/07_layer_differential_expression/" 
 ## Output directories
 dir_rdata <- here::here(
   "processed-data",
@@ -24,7 +24,7 @@ dir_rdata <- here::here(
   "PTSD"
 )
 
-dir_rdata <- '/data/humgen/daskalakislab/jajoo/SciencePaper/DLPFCSpatialEnrichment/spatialDLPFC/processed-data/rdata/spe/10_clinical_gene_set_enrichment/PTSD'
+dir_rdata <- '/path/to/spe/10_clinical_gene_set_enrichment/PTSD'
 dir.create(dir_rdata, showWarnings = FALSE, recursive = TRUE)
 stopifnot(file.exists(dir_rdata)) ## Check that it was created successfully
 
@@ -33,7 +33,7 @@ dir_plots <- here::here(
   "10_clinical_gene_set_enrichment",
   "05_enrichment_PTSD"
 )
-dir_plots <- '/data/humgen/daskalakislab/jajoo/SciencePaper/DLPFCSpatialEnrichment/plot'
+dir_plots <- '/path/to/jajoo/SciencePaper/DLPFCSpatialEnrichment/plot'
 dir.create(dir_plots, showWarnings = FALSE, recursive = TRUE)
 stopifnot(file.exists(dir_plots))
 
@@ -60,10 +60,10 @@ names(de_protein2) <- paste0("protein_", names(de_protein2))
 ptsd_genes <- c(de_gene2, de_protein2)
 names(ptsd_genes)
 
-gtf <- rtracklayer::import('/data/humgen/daskalakislab/jajoo/references/copy/gencode.v33lift37.genes.patched_contigs.gtf')
+gtf <- rtracklayer::import('/path/to/gencode.v33lift37.genes.patched_contigs.gtf')
 gtf_df=as.data.frame(gtf)
 gtf_df <- gtf_df[,c("gene_id","gene_name")]
-MDD_mPFC_beta_sd <- readRDS("/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/BetaSD/Baseline/Protein/Proteins/MDD_mPFC_beta_sd.RDS")
+MDD_mPFC_beta_sd <- readRDS("/path/to//Proteins/MDD_mPFC_beta_sd.RDS")
 sigGeneSign <- cbind(MDD_mPFC_beta_sd$symbol[p.adjust(MDD_mPFC_beta_sd$pval,method = "fdr")<.05],
                      sign( MDD_mPFC_beta_sd$beta[p.adjust(MDD_mPFC_beta_sd$pval,method = "fdr")<.05]))
 sigGeneSign[,1] <- as.character(sigGeneSign[,1])
@@ -75,7 +75,7 @@ colnames(sigGeneSign) <- c("gene","change")
 ptsd_genes$protein_mPFC[["MDD_mPFC"]]  <- sigGeneSign
 
 
-PTSD_mPFC_beta_sd <- readRDS("/data/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Metafor/BetaSD/Baseline/Protein/Proteins/PTSD_mPFC_beta_sd.RDS")
+PTSD_mPFC_beta_sd <- readRDS("/path/to//Proteins/PTSD_mPFC_beta_sd.RDS")
 sigGeneSign <- cbind(PTSD_mPFC_beta_sd$symbol[p.adjust(PTSD_mPFC_beta_sd$pval,method = "fdr")<.05],
                      sign( PTSD_mPFC_beta_sd$beta[p.adjust(PTSD_mPFC_beta_sd$pval,method = "fdr")<.05]))
 sigGeneSign[,1] <- as.character(sigGeneSign[,1])
@@ -119,7 +119,7 @@ names(k_list) <- paste0("k", sprintf("%02d", k_list))
 ## Load the modeling results from the BayesSpace models
 bayesSpace_registration_fn <-
   map(k_list, ~ 
-    paste0('/data/humgen/daskalakislab/jajoo/SciencePaper/DLPFCSpatialEnrichment/spatialDLPFC//processed-data/rdata/spe/07_layer_differential_expression/',
+    paste0('/path/to/results/',
       "modeling_results_BayesSpace_k",
       sprintf("%02d", .x),
       ".Rdata"
@@ -135,7 +135,7 @@ bayesSpace_registration <-
 ## Read in the spatial registration labels
 bayes_anno <-
   read.csv(
-    file = "/data/humgen/daskalakislab/jajoo/SciencePaper/DLPFCSpatialEnrichment/spatialDLPFC/processed-data/rdata/spe/08_spatial_registration/bayesSpace_layer_annotations.csv"
+    file = "/path/to/spe/08_spatial_registration/bayesSpace_layer_annotations.csv"
     ) %>%
   select(layer_combo,
          test = cluster,
