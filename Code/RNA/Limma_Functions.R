@@ -180,7 +180,7 @@ run_limma <- function(anno, expr, covariates, contrast_var, type=NULL){
 #   Results with gene symbols
 map_gene_names <- function(results){
   
-  gene_map <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Bulk/RNA_Gene_Map.RDS")
+  gene_map <- readRDS("/path/to/Data/RNA/Bulk/RNA_Gene_Map.RDS")
   results <- merge(results, gene_map, by.x="gene", by.y="genes", all.x=T)
   
   return(results)
@@ -192,7 +192,7 @@ map_gene_names <- function(results){
 #   Results with gene symbols
 map_exon_names <- function(results){
   
-  exon_map <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Bulk/exon_map_with_index.RDS")
+  exon_map <- readRDS("/path/to/Data/RNA/Bulk/exon_map_with_index.RDS")
   results <- merge(results, exon_map, by="exon", all.x=T)
   
   return(results)
@@ -204,7 +204,7 @@ map_exon_names <- function(results){
 #   Results with gene symbols
 map_jx_names <- function(results){
   
-  jx_map <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Bulk/jx_map.RDS")
+  jx_map <- readRDS("/path/to/Data/RNA/Bulk/jx_map.RDS")
   results <- merge(results, jx_map, by="jx", all.x=T)
   
   return(results)
@@ -216,7 +216,7 @@ map_jx_names <- function(results){
 #   Results with gene symbols
 map_tx_names <- function(results){
   
-  tx_map <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Bulk/tx_map.RDS")
+  tx_map <- readRDS("/path/to/Data/RNA/Bulk/tx_map.RDS")
   results <- merge(results, tx_map, by="tx", all.x=T)
   
   return(results)
@@ -367,8 +367,8 @@ limma_wrapper <- function(anno_file, voom_file, region, dx=NULL, ptsd_vs_mdd = F
 
 
 # region <- "mPFC"
-# anno_file = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Annotation/Annotation_batch1.RDS"
-# voom_file = paste0("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Voom/Txs/batch1/log2TMM1_",region,".RDS")
+# anno_file = "/path/to/Data/Annotation/Annotation_batch1.RDS"
+# voom_file = paste0("/path/to/Data/RNA/Voom/Txs/batch1/log2TMM1_",region,".RDS")
 # region = region
 # dx="PTSD"
 # ptsd_vs_mdd = F
@@ -377,5 +377,5 @@ limma_wrapper <- function(anno_file, voom_file, region, dx=NULL, ptsd_vs_mdd = F
 # type = "tx"
 # covariates = c("PTSD","AgeDeath","Sex","PMI","ancestryPC1","ancestryPC2","Astro","inhib","ex","Oligo","Micro","OPC","Tcell","mitoMapped")
 # contrast_var = "PTSD"
-# out_folder = "/data/humgen/daskalakislab/dipietro/SciencePaper/Data/RNA/Limma_Results/Txs/FinalizedCovs_01_30_23/batch1/PTSD/"
+# out_folder = "/path/to/Data/RNA/Limma_Results/Txs/FinalizedCovs_01_30_23/batch1/PTSD/"
 
