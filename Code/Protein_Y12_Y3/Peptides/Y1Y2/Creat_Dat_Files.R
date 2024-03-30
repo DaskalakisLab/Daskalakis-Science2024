@@ -7,13 +7,13 @@ library(doParallel)
 library(ggplot2)
 library(ggpubr)
 
-dat <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/1b.PD.TMT_Peptides_batch1.NoCorrection.RDS")
+dat <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/TamporNormalized/1b.PD.TMT_Peptides_batch11.NoCorrection.RDS")
 dat <- as.matrix(dat)
-traits <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/Proteomics/batch_designs.RDS")
+traits <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Protein/Proteomics/batch1_designs.RDS")
 traits$Plate <- gsub("F", "", traits$Plate)
 traits$Plate <- sprintf("%02d", as.numeric(traits$Plate))
 rownames(traits) <- paste0("b",traits$Plate, ".", traits$Position)
-names(traits)[names(traits)=="Plate"] <- "Batch"
+names(traits)[names(traits)=="Plate"] <- "batch1"
 
 
 traits_Amygdala <- traits[(traits$Brain_Region=="Amygdala") | (traits$Brain_Region=="GIS"),]
