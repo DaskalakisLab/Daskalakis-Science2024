@@ -47,3 +47,19 @@ meta_analyze(batch1_file="/path/to/Proteins/batch1/PTSD_MDD/results_PTSD+MDD_mPF
              batch2_file="/path/to/Proteins/batch2/PTSD_MDD/results_PTSD+MDD_mPFC_PTSD_MDD.RDS",
              outfile="/path/to/Proteins/PTSD_MDD_mPFC.RDS",
              type="protein")
+
+# PTSD vs MDD
+meta_analyze(batch1_file="/path/to/Proteins/batch1/PTSD_vs_MDD/results_PTSD_vs_MDD_CentralAmyg_PTSD.RDS",
+             batch2_file="/path/to/Proteins/batch2/PTSD_vs_MDD/results_PTSD_vs_MDD_CentralAmyg_PTSD.RDS",
+             outfile="/path/to/Proteins/PTSD_vs_MDD_CentralAmygcc.RDS",
+             type="protein")
+
+meta_analyze(batch1_file="/path/to/Proteins/batch1/PTSD_vs_MDD/results_PTSD_vs_MDD_DG_PTSD.RDS",
+             batch2_file="/path/to/Proteins/batch2/PTSD_vs_MDD/results_PTSD_vs_MDD_DG_PTSD.RDS",
+             outfile="/path/to/Proteins/PTSD_vs_MDD_DGcc.RDS",
+             type="protein")
+
+meta_analyze(batch1_file="/path/to/Proteins/batch1/PTSD_vs_MDD/results_PTSD_vs_MDD_mPFC_PTSD.RDS",
+             batch2_file="/path/to/Proteins/batch2/PTSD_vs_MDD/results_PTSD_vs_MDD_mPFC_PTSD.RDS",
+             outfile="/path/to/Proteins/PTSD_vs_MDD_mPFCcc.RDS",
+             type="protein")
