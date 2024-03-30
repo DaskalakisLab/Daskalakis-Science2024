@@ -28,19 +28,19 @@ calculate_PCs <- function(expr){
   return(PCs)
 }
 
-expr_ca <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/CentralAmygMfunnorm.RDS")
+expr_ca <- readRDS("/path/to/CentralAmygMfunnorm.RDS")
 expr_ca <- as.data.frame(t(expr_ca))
 PC_ca <- calculate_PCs(expr_ca)
 PC_ca <- as.data.frame(PC_ca)
 
 
-expr_dg <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/DGMfunnorm.RDS")
+expr_dg <- readRDS("/path/to/DGMfunnorm.RDS")
 expr_dg <- as.data.frame(t(expr_dg))
 PC_dg <- calculate_PCs(expr_dg)
 PC_dg <- as.data.frame(PC_dg)
 
 
-expr_mpfc <- readRDS("/data/humgen/daskalakislab/dipietro/SciencePaper/Data/Methylation/AartiNormalized/mPFCMfunnorm.RDS")
+expr_mpfc <- readRDS("/path/to/mPFCMfunnorm.RDS")
 expr_mpfc <- as.data.frame(t(expr_mpfc))
 PC_mpfc <- calculate_PCs(expr_mpfc)
 PC_mpfc <- as.data.frame(PC_mpfc)
