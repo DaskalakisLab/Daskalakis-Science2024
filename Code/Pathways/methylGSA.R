@@ -24,7 +24,7 @@ library(methylGSA)
 library(IlluminaHumanMethylationEPICanno.ilm10b4.hg19)
  
 ## load .txt file and label columns
-# df <- read.table("~/humgen/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Methylation/LimmaResults/rep/MDD_CentralAmyg.txt", sep = "\t")
+# df <- read.table("/path/to/Methylation/LimmaResults/rep/MDD_CentralAmyg.txt", sep = "\t")
 # colnames(df) <- c("cpgs", "pval")
 # 
 # #create a vector with the named pvals if your probes
@@ -51,13 +51,13 @@ res_adj_R = methylRRA(cpg.pval = cpg.pval,sig.cut = 0.001, array.type = "EPIC", 
                       minsize = 20, maxsize = 500)
  
 ## save results
-write.csv(res_go, file= "~/humgen/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Methylation/LimmaResults/rep/BU_not_repVer01_methylGSEA/GO/PTSD_vmPFC_RRA_GO.csv", quote = F)
+write.csv(res_go, file= "/path/to/Methylation/LimmaResults/rep/BU_not_repVer01_methylGSEA/GO/PTSD_vmPFC_RRA_GO.csv", quote = F)
  
-write.csv(res_R, file= "~/humgen/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Methylation/LimmaResults/rep/BU_not_repVer01_methylGSEA/REACTOME/PTSD_vmPFC_RRA_R.csv", quote = F)
+write.csv(res_R, file= "/path/to/Methylation/LimmaResults/rep/BU_not_repVer01_methylGSEA/REACTOME/PTSD_vmPFC_RRA_R.csv", quote = F)
  
  
 ############## Artemis SynGO
-syngo_ontologies <- read_excel("/data/humgen/daskalakislab/aiatrou/Science/GSEA_TEST/syngo_ontologies.xlsx")
+syngo_ontologies <- read_excel("/path/to/syngo_ontologies.xlsx")
 list <- list(NA)
 for(i in 1:length(syngo_ontologies$id)){
   try <- syngo_ontologies$hgnc_symbol[i]
@@ -70,10 +70,10 @@ cpg.pval <- results_PTSD_vmPFC_BU$P.Value
 names(cpg.pval) <- results_PTSD_vmPFC_BU$meth
 res_syngo = methylRRA(cpg.pval = cpg.pval, method = "GSEA", array.type = "EPIC", GS.list = list, GS.idtype = "SYMBOL",
                    minsize = 20, maxsize = 500)
-write.csv(res_syngo, file= "~/humgen/humgen/daskalakislab/SciencePaper_Mo_Ioulia/Data/Methylation/LimmaResults/rep/BU_not_repVer01_methylGSEA/synGO/PTSD_vmPFC_RRA_synGO.csv", quote = F)
+write.csv(res_syngo, file= "/path/to/Methylation/LimmaResults/rep/BU_not_repVer01_methylGSEA/synGO/PTSD_vmPFC_RRA_synGO.csv", quote = F)
  
 ############## ALL C5 pathways
-c5_ontologies <- read_excel("~/humgen/humgen/daskalakislab/Cameron/c5_all_2023_Hs_symbols.xlsx")
+c5_ontologies <- read_excel("/path/to/c5_all_2023_Hs_symbols.xlsx")
 list2 <- list(NA)
 for(i in 1:length(c5_ontologies$id)){
   try <- c5_ontologies$hgnc_symbol[i]
