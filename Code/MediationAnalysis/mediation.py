@@ -48,9 +48,9 @@ def generate_missing_information(row_df, brainregion_name):
 
 
 # Load data
-basePath = "/data/humgen/daskalakislab/vincent/ScienceMediation/"
+basePath = "/path/to/base/dir"
 form_path = basePath + "Formulas.csv"
-annofile = "/data/humgen/daskalakislab/ioulia/sciencePaper/Vincent/data/anno_GE_PTSD_MDD_ALLSNPs.csv"
+annofile = "path/to/annoFile/"
 
 
 # load data frames
@@ -134,13 +134,13 @@ results = pd.concat(results)
 fdrframes = pd.concat(fdrframes)
 missing = pd.concat(missing)
 
-results.to_csv("/data/humgen/daskalakislab/vincent/ScienceMediation/medResults.csv")
-missing.to_csv("/data/humgen/daskalakislab/vincent/ScienceMediation/missing.csv", index=False)
+results.to_csv("/path/to/results)
+missing.to_csv("/path/to/,missing", index=False)
 
 rej, correctedvals = fdrcorrection(fdrframes["Med_pval"], method='poscorr')
-# results.to_csv("/data/humgen/daskalakislab/vincent/ScienceMediation/medResults.csv", index=False)
+# results.to_csv("//path/tomedResults.csv", index=False)
 fdrframes["pval_fdrcorr"], fdrframes["decision_corr"] = correctedvals.T, rej.T
-fdrframes.to_csv("/data/humgen/daskalakislab/vincent/ScienceMediation/fdRResults_prem.csv", index=False)
+fdrframes.to_csv("//path/tofdRResults_prem.csv", index=False)
 
 
 print('done')
