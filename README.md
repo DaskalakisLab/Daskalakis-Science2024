@@ -4,4 +4,4 @@ This repository contains code for all the major analyses that were run for the D
 
 PTSD Brainomics Project Overview
 
-<img width="461" alt="outline" src="https://github.com/DaskalakisLab/Daskalakis-Science2024/assets/46993370/a2da7f86-913e-4f71-97d3-62bbb85dade4">
+![overview_Daskalakis_et_al_Science_2024](https://github.com/DaskalakisLab/Daskalakis-Science2024/assets/46993370/bc0e35f7-675c-48ef-b957-ca12c7323af4)
